@@ -42,7 +42,7 @@ export default async function handler(req, res) {
     // 2) Send emails (use Resend’s neutral sender until your domain is verified)
     const sender =
       process.env.MAIL_FROM ||
-      'Manjummel Travels <notifications@resend.dev>'; // swap to bookings@manjummeltravels.co.uk after DNS verified in Resend
+      'Manjummel Travels <notifications@resend.dev>'; // swap to manjummeltravels@gmail.com after DNS verified in Resend
 
     // to customer
     await resend.emails.send({
