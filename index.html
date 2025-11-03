@@ -10,12 +10,13 @@
     .top-bar{background:#16a085;color:#fff;padding:10px 0;font-size:14px}
     .top-bar .container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
     .top-bar a{color:#fff;text-decoration:none;margin-right:20px}
+
     nav{background:#fff;padding:20px 0;box-shadow:0 2px 5px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}
     nav .container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
-    .logo{display:flex;align-items:center;gap:15px}
-    .logo-icon{font-size:40px}
-    .logo-text h1{font-size:24px;color:#333}
-    .logo-text p{font-size:13px;color:#666}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo-img{height:44px;width:auto;display:block}
+    .logo-text h1{font-size:20px;color:#333;line-height:1.2;margin:0}
+    .logo-text p{font-size:12px;color:#666;margin-top:2px}
     nav ul{display:flex;list-style:none;gap:30px;align-items:center}
     nav a{text-decoration:none;color:#333;font-weight:500;transition:color .3s}
     nav a:hover,nav a.active{color:#16a085}
@@ -23,19 +24,23 @@
     .btn-primary:hover{background:#138f75}
     .btn-secondary{background:transparent;color:#fff;padding:12px 30px;border:2px solid #fff;border-radius:5px;text-decoration:none;font-weight:600;transition:all .3s;display:inline-block}
     .btn-secondary:hover{background:#fff;color:#16a085}
-    .hero{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80');background-size:cover;background-position:center;color:#fff;text-align:center;padding:150px 20px;min-height:600px;display:flex;align-items:center;justify-content:center}
+
+    .hero{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80');background-size:cover;background-position:center;color:#fff;text-align:center;padding:150px 20px;min-height:560px;display:flex;align-items:center;justify-content:center}
     .hero-content{max-width:900px}
     .badge{background:#16a085;color:#fff;padding:8px 20px;border-radius:20px;display:inline-block;margin-bottom:30px;font-size:14px;font-weight:600}
     .hero h1{font-size:56px;margin-bottom:20px;font-weight:700}
     .hero p{font-size:20px;margin-bottom:40px;line-height:1.6}
     .hero-buttons{display:flex;gap:20px;justify-content:center}
+
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
     .features{padding:80px 20px;background:#f8f9fa}
     .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:50px}
     .feature-card{background:#fff;padding:40px 30px;border-radius:10px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.05)}
     .feature-icon{width:80px;height:80px;background:#d4f4eb;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:32px;color:#16a085}
     .feature-card h3{font-size:20px;margin-bottom:15px}
     .feature-card p{color:#666;font-size:15px}
+
     .trips{padding:80px 20px}
     .section-header{text-align:center;margin-bottom:50px}
     .section-header h2{font-size:42px;margin-bottom:15px}
@@ -57,16 +62,32 @@
     .btn-outline{border:2px solid #16a085;color:#16a085;padding:10px 25px;border-radius:5px;text-decoration:none;font-weight:600;transition:all .3s;display:inline-block}
     .btn-outline:hover{background:#16a085;color:#fff}
     .view-all{text-align:center;margin-top:50px}
-    .why-choose{background:#16a085;color:#fff;padding:80px 20px}
-    .why-choose .section-header h2,.why-choose .section-header p{color:#fff}
-    .benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-top:50px}
-    .benefit{text-align:center}
-    .benefit-icon{width:60px;height:60px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:28px}
-    .benefit h3{font-size:20px;margin-bottom:15px}
-    .benefit p{font-size:15px;opacity:.9}
-    .cta{padding:80px 20px;text-align:center;background:#f8f9fa}
-    .cta h2{font-size:42px;margin-bottom:20px}
-    .cta p{font-size:18px;color:#666;margin-bottom:40px}
+
+    .about-hero{background:linear-gradient(135deg,#16a085 0%,#138f75 100%);color:#fff;padding:100px 20px;text-align:center}
+    .about-hero h1{font-size:48px;margin-bottom:20px}
+    .about-hero p{font-size:20px;max-width:700px;margin:0 auto;opacity:.95}
+    .about-section{padding:80px 20px;background:#fff}
+    .about-content{max-width:1000px;margin:0 auto;padding:0 0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:60px}
+    .about-image{width:100%;height:400px;border-radius:10px;background-size:cover;background-position:center}
+    .about-text h2{font-size:32px;margin-bottom:15px;color:#333}
+    .about-text p{color:#444;line-height:1.8;margin-bottom:14px;font-size:16px}
+
+    .values-section{background:#f8f9fa;padding:80px 20px}
+    .values-grid{max-width:1200px;margin:50px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+    .value-card{background:#fff;padding:40px 30px;border-radius:10px;text-align:center;box-shadow:0 2px 15px rgba(0,0,0,.08);transition:all .3s}
+    .value-card:hover{transform:translateY(-5px);box-shadow:0 5px 25px rgba(0,0,0,.15)}
+    .value-icon{width:70px;height:70px;background:linear-gradient(135deg,#16a085 0%,#138f75 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;font-size:30px}
+
+    /* Terms */
+    .terms{padding:80px 20px;background:#fff}
+    .terms .wrap{max-width:1000px;margin:0 auto}
+    .terms h2{font-size:42px;margin-bottom:20px;text-align:center}
+    .terms h3{font-size:20px;margin-top:24px;margin-bottom:8px}
+    .terms p, .terms li{color:#555;line-height:1.8;font-size:15px}
+    .terms ul{padding-left:18px;margin:10px 0}
+    .terms .meta{color:#777;margin-bottom:14px;text-align:center}
+
     footer{background:#1a2332;color:#fff;padding:60px 20px 20px}
     .footer-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-bottom:40px}
     .footer-section h3{margin-bottom:20px;font-size:20px}
@@ -79,68 +100,27 @@
     .social-icons a{width:40px;height:40px;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;transition:background .3s}
     .social-icons a:hover{background:#16a085}
     .footer-bottom{max-width:1200px;margin:0 auto;padding-top:30px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;font-size:14px;color:#adb5bd}
-    .footer-links{display:flex;gap:20px}
+
+    .whatsapp-float{position:fixed;width:60px;height:60px;bottom:30px;right:30px;background:#25d366;color:#fff;border-radius:50%;text-align:center;font-size:30px;box-shadow:2px 2px 15px rgba(0,0,0,.3);z-index:999;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;text-decoration:none}
+    .whatsapp-float:hover{transform:scale(1.1)}
+
     @media (max-width:768px){
       .hero h1{font-size:36px}
       .hero p{font-size:16px}
       .hero-buttons{flex-direction:column}
       nav ul{display:none}
-      .trips-grid{grid-template-columns:1fr}
+      .about-grid{grid-template-columns:1fr}
       .footer-content{grid-template-columns:1fr}
       .footer-bottom{flex-direction:column;gap:20px;text-align:center}
       .section-header h2{font-size:32px}
-    }
-    .modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.7);overflow-y:auto}
-    .modal.active{display:block}
-    .modal-content{background:#fff;margin:50px auto;padding:0;max-width:800px;border-radius:10px;position:relative;animation:slideDown .3s ease}
-    @keyframes slideDown{from{transform:translateY(-50px);opacity:0}to{transform:translateY(0);opacity:1}}
-    .modal-header{padding:30px;border-bottom:1px solid #eee}
-    .modal-header h2{font-size:32px;margin-bottom:10px}
-    .modal-body{padding:30px}
-    .modal-body h3{font-size:22px;margin:25px 0 15px 0;color:#16a085}
-    .modal-body p,.modal-body ul{color:#666;line-height:1.8;margin-bottom:15px}
-    .modal-body ul{padding-left:20px}
-    .modal-body li{margin-bottom:10px}
-    .modal-footer{padding:30px;border-top:1px solid #eee;display:flex;justify-content:space-between;align-items:center}
-    .close-modal{position:absolute;right:20px;top:20px;font-size:30px;cursor:pointer;color:#999;background:none;border:none;width:40px;height:40px;border-radius:50%;transition:all .3s}
-    .close-modal:hover{background:#f5f5f5;color:#333}
-    .price-highlight{font-size:36px;color:#16a085;font-weight:700}
-    .whatsapp-float{position:fixed;width:60px;height:60px;bottom:30px;right:30px;background:#25d366;color:#fff;border-radius:50%;text-align:center;font-size:30px;box-shadow:2px 2px 15px rgba(0,0,0,.3);z-index:999;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;text-decoration:none;animation:pulse 2s infinite}
-    .whatsapp-float:hover{transform:scale(1.1);box-shadow:2px 2px 25px rgba(37,211,102,.5)}
-    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
-    .about-section{padding:80px 20px;background:#fff}
-    .about-hero{background:linear-gradient(135deg,#16a085 0%,#138f75 100%);color:#fff;padding:100px 20px;text-align:center}
-    .about-hero h1{font-size:48px;margin-bottom:20px}
-    .about-hero p{font-size:20px;max-width:700px;margin:0 auto;opacity:.95}
-    .about-content{max-width:1000px;margin:0 auto;padding:60px 20px}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:60px}
-    .about-image{width:100%;height:400px;background:linear-gradient(135deg,#b3cde0 0%,#6497b1 100%);border-radius:10px;background-size:cover;background-position:center}
-    .about-text h2{font-size:36px;margin-bottom:20px;color:#333}
-    .about-text p{color:#666;line-height:1.8;margin-bottom:15px;font-size:16px}
-    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin:80px 0;text-align:center}
-    .stat-item{padding:30px;background:#f8f9fa;border-radius:10px;transition:transform .3s}
-    .stat-item:hover{transform:translateY(-5px)}
-    .stat-number{font-size:48px;font-weight:700;color:#16a085;margin-bottom:10px}
-    .stat-label{color:#666;font-size:16px}
-    .values-section{background:#f8f9fa;padding:80px 20px}
-    .values-grid{max-width:1200px;margin:50px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-    .value-card{background:#fff;padding:40px 30px;border-radius:10px;text-align:center;box-shadow:0 2px 15px rgba(0,0,0,.08);transition:all .3s}
-    .value-card:hover{transform:translateY(-5px);box-shadow:0 5px 25px rgba(0,0,0,.15)}
-    .value-icon{width:70px;height:70px;background:linear-gradient(135deg,#16a085 0%,#138f75 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;font-size:30px}
-    @media (max-width:768px){
-      .about-grid{grid-template-columns:1fr}
-      .stats-grid{grid-template-columns:repeat(2,1fr);gap:20px}
-      .about-hero h1{font-size:32px}
-      .stat-number{font-size:36px}
     }
   </style>
 
   <script>
     function openTripDetails(e){e.preventDefault();document.getElementById('tripModal').classList.add('active');document.body.style.overflow='hidden'}
     function closeTripDetails(){document.getElementById('tripModal').classList.remove('active');document.body.style.overflow='auto'}
-    // Close modal on outside click or ESC
-    window.addEventListener('click', (ev)=>{const m=document.getElementById('tripModal'); if(ev.target===m) closeTripDetails()});
-    document.addEventListener('keydown', (ev)=>{if(ev.key==='Escape') closeTripDetails()});
+    window.addEventListener('click',(ev)=>{const m=document.getElementById('tripModal'); if(ev.target===m) closeTripDetails()});
+    document.addEventListener('keydown',(ev)=>{if(ev.key==='Escape') closeTripDetails()});
   </script>
 </head>
 <body>
@@ -148,8 +128,8 @@
   <div class="top-bar">
     <div class="container">
       <div>
-        <a href="tel:+442012345678">📞 +44 20 1234 5678</a>
-        <a href="mailto:info@manjummeltravels.co.uk">✉️ info@manjummeltravels.co.uk</a>
+        <a href="tel:+447776696094">📞 +44 7776 696094</a>
+        <a href="mailto:londonsundaratravels@gmail.com">✉️ londonsundaratravels@gmail.com</a>
       </div>
       <div>📍 Serving all of London</div>
     </div>
@@ -159,7 +139,7 @@
   <nav>
     <div class="container">
       <div class="logo">
-        <div class="logo-icon">🚌</div>
+        <img src="assets/manjummel-logo.jpg" alt="Manjummel Travels logo" class="logo-img" loading="eager">
         <div class="logo-text">
           <h1>Manjummel Travels</h1>
           <p>UK Day Trips & Excursions</p>
@@ -169,8 +149,8 @@
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#trips">Our Trips</a></li>
         <li><a href="#about">About Us</a></li>
-        <li><a href="mailto:londonsundaratravels@gmail.com">Contact</a></li>
-        <li><a href="#book" class="btn-primary">Book a Trip</a></li>
+        <li><a href="#terms">Terms</a></li>
+        <li><a href="#trips" class="btn-primary">Book a Trip</a></li>
       </ul>
     </div>
   </nav>
@@ -183,7 +163,7 @@
       <p>Join us on unforgettable day trips exploring the UK's most stunning landscapes, historic cities, and charming villages</p>
       <div class="hero-buttons">
         <a href="#trips" class="btn-primary">View Trip Details →</a>
-        <a href="mailto:londonsundaratravels@gmail.com?subject=Wales Trip Inquiry&body=Hi Manjummel Travels,%0D%0A%0D%0AI'm interested in the Wales day trip.%0D%0A%0D%0APlease send me more information.%0D%0A%0D%0AThank you!" class="btn-secondary">Contact Us</a>
+        <a href="mailto:londonsundaratravels@gmail.com?subject=Trip%20Inquiry&body=Hi%20Manjummel%20Travels%2C%0D%0A%0D%0AI%27m%20interested%20in%20your%20day%20trips.%0D%0A%0D%0AThanks!" class="btn-secondary">Contact Us</a>
       </div>
     </div>
   </section>
@@ -201,53 +181,29 @@
       <div class="about-grid">
         <div class="about-image" style="background-image:url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80')"></div>
         <div class="about-text">
-          <h2>Our Story</h2>
-          <p>At Manjummel Travels, we believe in more than just travel — we believe in creating exceptional experiences that leave a lasting impression...</p>
-          <p>Our philosophy is rooted in the idea that the best journeys aren't just about the destinations — they're about the connections made along the way...</p>
-          <p>Whether you're embarking on a day trip to the stunning Durdle Door, Cotswold enjoying the serenity of the countryside, or taking in the vibrant city sights...</p>
+          <h2>About Our Company</h2>
+          <p>At <strong>Manjummel Travels</strong>, we’re more than a travel service — we’re creators of exceptional adventures for the UK Tamil community and all who seek memorable journeys. What started as a dream to discover Britain with friends has grown into a trusted travel provider, offering authentic, comfortable, and adventure-filled experiences.</p>
+
+          <h2>Our Philosophy</h2>
+          <p>We believe the best journeys are about connection — from exploring Durdle Door to sharing moments in scenic countryside and vibrant cities. Each trip is thoughtfully curated to foster lasting friendships and unforgettable experiences for Tamil families, friends, and solo travelers.</p>
+
+          <h2>Why Choose Manjummel Travels?</h2>
+          <p><strong>Curated Itineraries</strong> — Beautiful trips that blend iconic UK landscapes with authentic Tamil community flavour.</p>
+          <p><strong>Group Travel with a Difference</strong> — Warm, welcoming group adventures designed for genuine conversation, cultural sharing, and social connection.</p>
+          <p><strong>Budget-Friendly Comfort</strong> — Great value journeys — always affordable, always high quality.</p>
+          <p><strong>Timeless Memories</strong> — We capture moments, nurture friendships, and make every experience unforgettable.</p>
+
+          <p>Join us as we redefine Tamil travel in the UK — making every journey special, no matter how near or far. Book your spot and explore with us for authentic Tamil hospitality and lifelong memories!</p>
         </div>
       </div>
 
-      <div class="stats-grid">
-        <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label">Years Experience</div></div>
-        <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">Destinations</div></div>
-        <div class="stat-item"><div class="stat-number">10,000+</div><div class="stat-label">Happy Travelers</div></div>
-        <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Trips Annually</div></div>
-      </div>
-
-      <div class="about-grid" style="margin-top:80px;">
-        <div class="about-text">
-          <h2>With Manjummel Travels, You'll Experience:</h2>
-          <ul style="list-style:none;padding:0;">
-            <li style="margin-bottom:20px;padding-left:30px;position:relative;"><span style="position:absolute;left:0;color:#16a085;font-weight:bold;">✓</span><strong>Curated Itineraries</strong> — Beautifully crafted experiences that blend scenic exploration with local flavour.</li>
-            <li style="margin-bottom:20px;padding-left:30px;position:relative;"><span style="position:absolute;left:0;color:#16a085;font-weight:bold;">✓</span><strong>Group Travel with a Difference</strong> — Warm, welcoming, and socially rich trips where connections flourish.</li>
-            <li style="margin-bottom:20px;padding-left:30px;position:relative;"><span style="position:absolute;left:0;color:#16a085;font-weight:bold;">✓</span><strong>Budget-Friendly Comfort</strong> — Thoughtfully priced journeys that provide great value without compromising quality.</li>
-            <li style="margin-bottom:20px;padding-left:30px;position:relative;"><span style="position:absolute;left:0;color:#16a085;font-weight:bold;">✓</span><strong>Timeless Memories</strong> — Moments captured, friendships forged, and experiences that stay with you.</li>
-          </ul>
-        </div>
-        <div class="about-image" style="background-image:url('https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=800&q=80')"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="values-section">
-    <div class="container">
-      <div class="section-header" style="max-width:800px;margin:0 auto;">
-        <h2>Join Us</h2>
-        <p style="font-size:18px;line-height:1.8;color:#555;">Join us as we redefine the way we travel — together...</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="about-section">
-    <div class="about-content">
-      <div class="about-grid">
-        <div class="about-image" style="background-image:url('https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&q=80')"></div>
+      <div class="about-grid" style="margin-top:40px;">
         <div class="about-text">
           <h2>Our Commitment</h2>
-          <p>We're committed to providing exceptional service, creating memorable experiences, and making the beauty of the UK accessible to all...</p>
-          <div style="margin-top:30px;"><a href="#trips" class="btn-primary">Explore Our Trips</a></div>
+          <p>We’re committed to providing exceptional service, creating memorable experiences, and making the beauty of the UK accessible to all. From careful planning to friendly on-trip support, our team looks after every detail.</p>
+          <div style="margin-top:20px;"><a href="#trips" class="btn-primary">Explore Our Trips</a></div>
         </div>
+        <div class="about-image" style="background-image:url('https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=800&q=80')"></div>
       </div>
     </div>
   </section>
@@ -256,10 +212,10 @@
   <section class="features">
     <div class="container">
       <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon">📍</div><h3>UK Destinations</h3><p>Carefully selected locations across England</p></div>
-        <div class="feature-card"><div class="feature-icon">🕐</div><h3>Day Trips</h3><p>Return same day - perfect for busy schedules</p></div>
-        <div class="feature-card"><div class="feature-icon">👥</div><h3>Expert Guides</h3><p>Knowledgeable guides on every trip</p></div>
-        <div class="feature-card"><div class="feature-icon">⭐</div><h3>Great Value</h3><p>Affordable prices with everything included</p></div>
+        <div class="feature-card"><div class="feature-icon">📍</div><h3>UK Destinations</h3><p>Carefully selected locations across England & Wales</p></div>
+        <div class="feature-card"><div class="feature-icon">🕐</div><h3>Day Trips</h3><p>Return the same day — perfect for busy schedules</p></div>
+        <div class="feature-card"><div class="feature-icon">👥</div><h3>Friendly Groups</h3><p>Welcoming community vibes on every trip</p></div>
+        <div class="feature-card"><div class="feature-icon">⭐</div><h3>Great Value</h3><p>Transparent pricing with no surprises</p></div>
       </div>
     </div>
   </section>
@@ -289,7 +245,8 @@
       </div>
 
       <div class="view-all">
-        <a href="#book" class="btn-primary">Book Now →</a>
+        <!-- Wales only: goes to your Google Form -->
+        <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdVNHOLodVDJWEwMDz82zWruK9bHep6CDavWrJHCLy9hktZcw/viewform?usp=header" target="_blank" rel="noopener">Book Now →</a>
       </div>
     </div>
   </section>
@@ -306,16 +263,15 @@
         <p>Experience the breathtaking beauty of Wales on this unforgettable day trip...</p>
         <h3>🗺️ Itinerary Highlights</h3>
         <ul>
-          <li><strong>Snowdonia National Park</strong> - Majestic mountain landscapes and scenic valleys</li>
-          <li><strong>Historic Welsh Castles</strong> - Explore medieval fortresses</li>
-          <li><strong>Coastal Views</strong> - Beautiful Welsh coastline</li>
-          <li><strong>Traditional Welsh Villages</strong> - Charming towns and local culture</li>
+          <li><strong>Snowdonia National Park</strong> — Majestic mountain landscapes and scenic valleys</li>
+          <li><strong>Historic Welsh Castles</strong> — Explore medieval fortresses</li>
+          <li><strong>Coastal Views</strong> — Beautiful Welsh coastline</li>
+          <li><strong>Traditional Welsh Villages</strong> — Charming towns and local culture</li>
         </ul>
         <h3>✅ What's Included</h3>
         <ul>
           <li>Comfortable coach travel from London</li>
-          <li>Expert tour guide</li>
-          <li>All entrance fees to attractions</li>
+          <li>Friendly group lead</li>
           <li>Free time for lunch and exploration</li>
         </ul>
         <h3>📋 Important Information</h3>
@@ -327,46 +283,108 @@
       </div>
       <div class="modal-footer">
         <div class="price-highlight">£149 <span style="font-size:16px;color:#666;font-weight:400;">per person</span></div>
-        <a class="btn-primary" href="#book" onclick="closeTripDetails()">Book This Trip →</a>
+        <!-- Modal "Book" goes to Google Form -->
+        <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdVNHOLodVDJWEwMDz82zWruK9bHep6CDavWrJHCLy9hktZcw/viewform?usp=header" target="_blank" rel="noopener">Book This Trip →</a>
       </div>
     </div>
   </div>
 
-  <!-- Book / Enquire -->
-  <section id="book" class="cta" style="background:#fff;">
-    <div class="container" style="max-width:760px;">
-      <div class="section-header" style="margin-bottom:20px;">
-        <h2>Book / Enquire</h2>
-        <p>Fill this and we’ll email you next steps.</p>
-      </div>
+  <!-- Terms & Policies -->
+  <section class="terms" id="terms">
+    <div class="wrap">
+      <h2>Terms & Policies</h2>
+      <div class="meta">Last updated: 01-11-2025</div>
 
-      <form id="bookingForm" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-        <input name="name"  placeholder="Full name" required style="padding:12px;border:1px solid #ddd;border-radius:8px;grid-column:span 1;">
-        <input name="email" type="email" placeholder="Email" required style="padding:12px;border:1px solid #ddd;border-radius:8px;grid-column:span 1;">
-        <input name="phone" placeholder="Phone" required style="padding:12px;border:1px solid #ddd;border-radius:8px;grid-column:span 2;">
-        <input name="trip"  value="Wales Day Trip" type="hidden">
-        <button id="bookBtn" class="btn-primary" type="submit" style="grid-column:span 2;justify-self:center;">Send Enquiry</button>
-      </form>
+      <h3>Who We Are</h3>
+      <p><strong>Manjummel Travels</strong> — your trusted provider of authentic UK Tamil travel experiences.<br>
+      Email: <a href="mailto:londonsundaratravels@gmail.com">londonsundaratravels@gmail.com</a> ·
+      Phone/WhatsApp: <a href="tel:+447776696094">+44 7776 696094</a></p>
 
-      <p id="bookMsg" style="text-align:center;margin-top:12px;display:none;"></p>
-    </div>
-  </section>
+      <h3>Scope of Terms</h3>
+      <p>These terms apply to all trips, tours, and travel packages booked via our website, email, phone, or WhatsApp.</p>
 
-  <!-- Why Choose -->
-  <section class="why-choose">
-    <div class="container">
-      <div class="section-header">
-        <h2>Why Choose Manjummel Travels?</h2>
-        <p>We're dedicated to providing exceptional day trip experiences</p>
-      </div>
-      <div class="benefits-grid">
-        <div class="benefit"><div class="benefit-icon">✓</div><h3>Comfortable, modern coaches</h3></div>
-        <div class="benefit"><div class="benefit-icon">✓</div><h3>Multiple London pickup points</h3></div>
-        <div class="benefit"><div class="benefit-icon">✓</div><h3>Expert local guides</h3></div>
-        <div class="benefit"><div class="benefit-icon">✓</div><h3>Small group sizes</h3></div>
-        <div class="benefit"><div class="benefit-icon">✓</div><h3>All entrance fees included</h3></div>
-        <div class="benefit"><div class="benefit-icon">✓</div><h3>Flexible booking options</h3></div>
-      </div>
+      <h3>Booking & Confirmation</h3>
+      <ul>
+        <li>Your booking is confirmed only after payment (or stated deposit) and our confirmation email.</li>
+        <li>Provide accurate personal details and any dietary/special needs when booking.</li>
+      </ul>
+
+      <h3>Pricing & Payments</h3>
+      <ul>
+        <li>All prices are in GBP (£), inclusive of applicable taxes unless noted.</li>
+        <li>Secure online payments via Stripe or PayPal are accepted.</li>
+        <li>Obvious pricing errors may be cancelled with a full refund.</li>
+      </ul>
+
+      <h3>What’s Included / Not Included</h3>
+      <p>Please see each trip page for inclusions (e.g., transport) and exclusions (e.g., optional entrance fees).</p>
+
+      <h3>Cancellations & Date Changes</h3>
+      <ul>
+        <li>Cancel 48+ hours before departure: full refund.</li>
+        <li>Cancel within 48 hours or no-show: non-refundable.</li>
+        <li>One free date change up to 48 hours pre-departure (subject to availability).</li>
+      </ul>
+
+      <h3>Operator Changes & Cancellations</h3>
+      <ul>
+        <li>We may adjust timings/routes for safety, traffic, or weather.</li>
+        <li>If we cancel, choose a full refund or a free reschedule.</li>
+        <li>We are not responsible for extra costs beyond the trip fee (hotels, onward travel, etc.).</li>
+      </ul>
+
+      <h3>Minimum Numbers & Punctuality</h3>
+      <ul>
+        <li>Some trips require a minimum number of guests; if not met, we’ll refund or offer another date.</li>
+        <li>Departures leave promptly; late arrivals may forfeit their place without refund.</li>
+      </ul>
+
+      <h3>Health, Safety, & Accessibility</h3>
+      <ul>
+        <li>Travellers should be fit for the trip; share medical/mobility needs in advance.</li>
+        <li>Wear suitable footwear and weather-appropriate clothing.</li>
+        <li>Some destinations have limited accessibility; see trip details.</li>
+      </ul>
+
+      <h3>Dietary Needs</h3>
+      <p>State Veg/Non-Veg and any special requests when booking; third-party venues may have limits.</p>
+
+      <h3>Behaviour & Property</h3>
+      <p>Disruptive/unsafe/illegal behaviour may result in removal without refund. Guests are liable for damage to property/vehicles.</p>
+
+      <h3>Personal Belongings</h3>
+      <p>Guests are responsible for their belongings; we’re not liable for loss/theft/damage unless due to our negligence.</p>
+
+      <h3>Weather & Force Majeure</h3>
+      <p>We’re not liable for changes or delays due to severe weather, strikes, or events beyond our control; we’ll reschedule or refund where appropriate.</p>
+
+      <h3>Children & Age Policy</h3>
+      <p>Under-16s must be with a responsible adult. Child seats must be requested and confirmed if required by UK law.</p>
+
+      <h3>Insurance</h3>
+      <p>We recommend personal travel insurance covering cancellations, health, and valuables.</p>
+
+      <h3>Photography & Media</h3>
+      <p>Photos/videos may be taken for promotional use. Tell your guide if you do not consent.</p>
+
+      <h3>Complaints & Feedback</h3>
+      <p>Raise issues on-trip for immediate help. For post-trip concerns, email us within 7 days with your booking reference.</p>
+
+      <h3>Liability</h3>
+      <p>We do not limit liability for death/personal injury due to our negligence/fraud. Otherwise, liability is limited to the trip fee, as permitted by law.</p>
+
+      <h3>Governing Law</h3>
+      <p>England & Wales law; exclusive jurisdiction of their courts.</p>
+
+      <h3>Privacy, Data, & Cookies (UK GDPR)</h3>
+      <ul>
+        <li><strong>What we collect:</strong> name, email, phone, preferences, dietary info. Payments handled by Stripe/PayPal; we do not store card details.</li>
+        <li><strong>How we use it:</strong> booking management, safety/service improvements, and — with consent — marketing (unsubscribe anytime).</li>
+        <li><strong>Sharing:</strong> trusted providers (e.g., Google Workspace, Stripe, PayPal) under contract.</li>
+        <li><strong>Retention:</strong> booking records kept for up to 4 weeks then deleted.</li>
+        <li><strong>Your rights:</strong> access, correction, deletion, restriction — contact us. You may also complain to the ICO.</li>
+        <li><strong>Cookies:</strong> used for basic site operation and analytics; manage via your browser.</li>
+      </ul>
     </div>
   </section>
 
@@ -375,10 +393,10 @@
     <div class="footer-content">
       <div class="footer-section">
         <div class="logo">
-          <div class="logo-icon">🚌</div>
+          <img src="assets/manjummel-logo.jpg" alt="Manjummel Travels logo" class="logo-img" loading="lazy">
           <div class="logo-text"><h3>Manjummel Travels</h3><p>UK Day Trips</p></div>
         </div>
-        <p style="margin-top:20px;">Discover the beauty of Britain with our expertly guided day trips from London.</p>
+        <p style="margin-top:20px;">Discover the beauty of Britain with our friendly, community-style day trips from London.</p>
         <div class="social-icons"><a href="#">f</a><a href="#">📷</a><a href="#">🐦</a></div>
       </div>
 
@@ -388,28 +406,27 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#trips">Our Trips</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#terms">Terms & Policies</a></li>
         </ul>
       </div>
 
       <div class="footer-section">
         <h3>Popular Destinations</h3>
         <ul>
-          <li><a href="#">Wales</a></li>
-          <li><a href="#">Snowdonia</a></li>
-          <li><a href="#">Welsh Castles</a></li>
-          <li><a href="#">Cardiff</a></li>
-          <li><a href="#">North Wales</a></li>
+          <li><a href="#trips">Wales</a></li>
+          <li><a href="#trips">Snowdonia</a></li>
+          <li><a href="#trips">Welsh Castles</a></li>
+          <li><a href="#trips">Cardiff</a></li>
+          <li><a href="#trips">North Wales</a></li>
         </ul>
       </div>
 
       <div class="footer-section">
         <h3>Contact Us</h3>
         <ul>
-          <li><a href="tel:+442012345678">📞 +44 20 1234 5678</a></li>
-          <li><a href="tel:+442087654321">📞 +44 20 8765 4321</a></li>
-          <li><a href="mailto:info@manjummeltravels.co.uk">✉️ info@manjummeltravels.co.uk</a></li>
-          <li>📍 123 Travel Street<br>London, UK W1A 1AA</li>
+          <li><a href="tel:+447776696094">📞 +44 7776 696094</a></li>
+          <li><a href="mailto:londonsundaratravels@gmail.com">✉️ londonsundaratravels@gmail.com</a></li>
+          <li>📍 Central London, UK</li>
         </ul>
       </div>
     </div>
@@ -417,50 +434,14 @@
     <div class="footer-bottom">
       <div>© 2025 Manjummel Travels. All rights reserved.</div>
       <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Cookie Policy</a>
+        <a href="#terms">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#terms">Cookies</a>
       </div>
     </div>
   </footer>
 
   <!-- WhatsApp -->
-  <a href="https://wa.me/447XXXXXXXXX?text=Hi%20Manjummel%20Travels!%20I'm%20interested%20in%20the%20Wales%20day%20trip.%20Please%20send%20me%20more%20information."
-     class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp"><span style="font-size:32px;">💬</span></a>
-
-  <!-- Submit JS -->
-  <script>
-    (function(){
-      const form = document.getElementById('bookingForm');
-      const btn  = document.getElementById('bookBtn');
-      const msg  = document.getElementById('bookMsg');
-      form.addEventListener('submit', async (e)=>{
-        e.preventDefault();
-        msg.style.display='none'; btn.disabled=true; btn.textContent='Sending...';
-        try{
-          const payload = Object.fromEntries(new FormData(form).entries());
-          const res = await fetch('/api/bookings', {
-            method:'POST',
-            headers:{'Content-Type':'application/json'},
-            body: JSON.stringify(payload)
-          });
-          const out = await res.json();
-          if(res.ok){
-            form.reset();
-            msg.textContent='Thank you! We’ve received your enquiry.';
-            msg.style.color='#16a085'; msg.style.display='block';
-            msg.scrollIntoView({behavior:'smooth',block:'center'});
-          }else{
-            throw new Error(out.error || 'Unknown error');
-          }
-        }catch(err){
-          msg.textContent='Oops: '+ err.message;
-          msg.style.color='#c0392b'; msg.style.display='block';
-        }finally{
-          btn.disabled=false; btn.textContent='Send Enquiry';
-        }
-      });
-    })();
-  </script>
+  <a href="https://wa.me/447776696094?text=Hi%20Manjummel%20Travels!%20I%27m%20interested%20in%20your%20day%20trips." class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp"><span style="font-size:32px;">💬</span></a>
 </body>
 </html>
