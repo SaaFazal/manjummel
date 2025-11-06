@@ -24,6 +24,8 @@
     .btn-primary:hover{background:#138f75}
     .btn-secondary{background:transparent;color:#fff;padding:12px 30px;border:2px solid #fff;border-radius:5px;text-decoration:none;font-weight:600;transition:all .3s;display:inline-block}
     .btn-secondary:hover{background:#fff;color:#16a085}
+    .btn-outline{border:2px solid #16a085;color:#16a085;padding:10px 25px;border-radius:5px;text-decoration:none;font-weight:600;transition:all .3s;display:inline-block}
+    .btn-outline:hover{background:#16a085;color:#fff}
 
     .hero{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80');background-size:cover;background-position:center;color:#fff;text-align:center;padding:150px 20px;min-height:560px;display:flex;align-items:center;justify-content:center}
     .hero-content{max-width:900px}
@@ -49,7 +51,6 @@
     .trip-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 15px rgba(0,0,0,.1);transition:transform .3s}
     .trip-card:hover{transform:translateY(-5px)}
     .trip-image{width:100%;height:250px;background-size:cover;background-position:center;position:relative}
-    .trip-card:nth-child(1) .trip-image{background-image:url('https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?w=800&q=80')}
     .trip-tag{position:absolute;top:15px;right:15px;background:#d4f4eb;color:#16a085;padding:5px 15px;border-radius:15px;font-size:12px;font-weight:600}
     .trip-content{padding:25px}
     .trip-location{color:#666;font-size:14px;margin-bottom:10px;display:flex;align-items:center;gap:5px}
@@ -59,8 +60,6 @@
     .trip-footer{display:flex;justify-content:space-between;align-items:center;padding-top:15px;border-top:1px solid #eee}
     .trip-price{color:#16a085;font-size:28px;font-weight:700}
     .trip-price span{font-size:14px;color:#666;font-weight:400}
-    .btn-outline{border:2px solid #16a085;color:#16a085;padding:10px 25px;border-radius:5px;text-decoration:none;font-weight:600;transition:all .3s;display:inline-block}
-    .btn-outline:hover{background:#16a085;color:#fff}
     .view-all{text-align:center;margin-top:50px}
 
     .about-hero{background:linear-gradient(135deg,#16a085 0%,#138f75 100%);color:#fff;padding:100px 20px;text-align:center}
@@ -103,6 +102,19 @@
 
     .whatsapp-float{position:fixed;width:60px;height:60px;bottom:30px;right:30px;background:#25d366;color:#fff;border-radius:50%;text-align:center;font-size:30px;box-shadow:2px 2px 15px rgba(0,0,0,.3);z-index:999;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;text-decoration:none}
     .whatsapp-float:hover{transform:scale(1.1)}
+
+    /* Modal + helpers */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:1000;padding:20px}
+    .modal.active{display:flex}
+    .modal-content{background:#fff;max-width:800px;width:100%;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.25);overflow:hidden;position:relative}
+    .modal-header{padding:24px 28px;border-bottom:1px solid #eee}
+    .modal-body{padding:24px 28px}
+    .modal-footer{padding:20px 28px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between}
+    .close-modal{position:absolute;margin-left:auto;border:none;background:transparent;font-size:28px;line-height:1;cursor:pointer;right:24px;top:18px}
+    .simple-table{width:100%;border-collapse:collapse;margin:12px 0 8px}
+    .simple-table th,.simple-table td{border:1px solid #eee;padding:8px 10px;text-align:left;font-size:14px}
+    .simple-table thead th{background:#f8f9fa;font-weight:600}
+    .tight-list li{margin:6px 0}
 
     @media (max-width:768px){
       .hero h1{font-size:36px}
@@ -220,33 +232,36 @@
     </div>
   </section>
 
-  <!-- Trips -->
+  <!-- Trips (COTSWOLDS) -->
   <section class="trips" id="trips">
     <div class="container">
       <div class="section-header">
-        <h2>Wales Day Trip</h2>
-        <p>Explore the beauty and heritage of Wales</p>
+        <h2>Cotswolds Day Trip</h2>
+        <p>Honey-stone villages, rolling hills, and storybook lanes</p>
       </div>
 
       <div class="trips-grid">
         <div class="trip-card">
-          <div class="trip-image"><div class="trip-tag">nature</div></div>
+          <div class="trip-image" style="background-image:url('https://images.unsplash.com/photo-1559070217-1d3675d0c846?w=1200&q=80')">
+            <div class="trip-tag">village charm</div>
+          </div>
           <div class="trip-content">
-            <div class="trip-location">📍 Wales, United Kingdom</div>
-            <h3>Wales Adventure</h3>
-            <p>Discover the stunning landscapes and rich heritage of Wales with breathtaking mountains, castles, and coastal views.</p>
+            <div class="trip-location">📍 Cotswolds, England</div>
+            <h3>Cotswolds Escape</h3>
+            <p>Visit Bibury’s Arlington Row, riverside Bourton-on-the-Water, and more picture-perfect Cotswold villages in one relaxed day.</p>
             <div class="trip-duration">🕐 1 Day</div>
             <div class="trip-footer">
               <div class="trip-price"><span>From</span> £149</div>
-              <a href="#" class="btn-outline view-details-btn" onclick="openTripDetails(event)">View Details</a>
+              <a href="#" class="btn-outline" onclick="openTripDetails(event)">View Details</a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="view-all">
-        <!-- Wales only: goes to your Google Form -->
-        <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdVNHOLodVDJWEwMDz82zWruK9bHep6CDavWrJHCLy9hktZcw/viewform?usp=header" target="_blank" rel="noopener">Book Now →</a>
+        <a class="btn-primary"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSdVNHOLodVDJWEwMDz82zWruK9bHep6CDavWrJHCLy9hktZcw/viewform?usp=header"
+           target="_blank" rel="noopener">Book Now →</a>
       </div>
     </div>
   </section>
@@ -256,35 +271,72 @@
     <div class="modal-content">
       <button class="close-modal" onclick="closeTripDetails()">&times;</button>
       <div class="modal-header">
-        <div class="trip-location">📍 Wales, United Kingdom</div>
-        <h2>Wales Adventure</h2>
+        <div class="trip-location">📍 Cotswolds, England</div>
+        <h2>Cotswolds Escape</h2>
       </div>
       <div class="modal-body">
-        <p>Experience the breathtaking beauty of Wales on this unforgettable day trip...</p>
-        <h3>🗺️ Itinerary Highlights</h3>
+        <p>Spend a dreamy day among honey-stone cottages, arched bridges, gentle rivers, and classic English countryside views.</p>
+
+        <h3>📍 Places to Visit</h3>
         <ul>
-          <li><strong>Snowdonia National Park</strong> — Majestic mountain landscapes and scenic valleys</li>
-          <li><strong>Historic Welsh Castles</strong> — Explore medieval fortresses</li>
-          <li><strong>Coastal Views</strong> — Beautiful Welsh coastline</li>
-          <li><strong>Traditional Welsh Villages</strong> — Charming towns and local culture</li>
+          <li><strong>Bibury</strong> — <em>Arlington Row</em> (14th-century cottages; iconic photo spot), <em>Bibury Trout Farm</em> (one of the UK’s oldest, with café and outdoor activities), <em>Church of St Mary</em> (11th-century Grade I), and <em>Rack Isle Nature Reserve</em> (wildflowers, birdlife, medieval wool-drying history).</li>
+          <li><strong>Bourton-on-the-Water</strong> — <em>Birdland Park & Gardens</em> (500+ birds incl. penguins, flamingos, parrots), <em>Cotswold Motoring Museum & Toy Collection</em> (seven galleries), <em>The Model Village</em> (1/9-scale stone replica), <em>Cotswold Perfumery</em> (guided fragrance tours), plus riverside walks over 18th-century bridges along the River Windrush.</li>
         </ul>
-        <h3>✅ What's Included</h3>
+
+        <h3>🗓️ Timetable</h3>
+        <table class="simple-table">
+          <thead><tr><th>Time</th><th>Location</th><th>Main Site / Activity</th><th>Coach Stop / Postcode</th></tr></thead>
+          <tbody>
+            <tr><td>08:00</td><td>London King’s Cross</td><td>Coach departs (arrive 15 mins early)</td><td>N1 9AB</td></tr>
+            <tr><td>10:30</td><td>Bibury</td><td>Arlington Row, Trout Farm, St Mary’s, Rack Isle</td><td>GL7 5NP</td></tr>
+            <tr><td>14:00</td><td>Depart Bibury</td><td>Coach to Bourton-on-the-Water</td><td>—</td></tr>
+            <tr><td>14:45</td><td>Bourton-on-the-Water</td><td>Birdland, Motoring Museum, Model Village, Perfumery, River walks</td><td>GL54 2AS</td></tr>
+            <tr><td>17:00</td><td>Depart Bourton</td><td>Return coach to London</td><td>—</td></tr>
+            <tr><td>20:30</td><td>London King’s Cross</td><td>Arrive back at base</td><td>N1 9AB</td></tr>
+          </tbody>
+        </table>
+
+        <h3>🅿️ Coach Parking Details</h3>
         <ul>
-          <li>Comfortable coach travel from London</li>
+          <li><strong>Bibury:</strong> Use <em>GL7 5NP</em> (village/coach areas near Arlington Row & Trout Farm).</li>
+          <li><strong>Bourton-on-the-Water:</strong> Use <em>GL54 2AS</em> for Bourton Vale Car Park, Station Road (coach bays).</li>
+        </ul>
+
+        <h3>🧭 Detailed Itinerary</h3>
+        <ul class="tight-list">
+          <li>🕗 <strong>08:00</strong> — Depart London King’s Cross (arrive 15 mins early, N1 9AB).</li>
+          <li>🥨 Snacks provided on the coach (outbound & return).</li>
+          <li>🕙 <strong>10:30</strong> — Arrive Bibury; walk to Arlington Row for photography.</li>
+          <li>🏞️ <strong>10:45</strong> — Bibury Trout Farm (aquaculture, outdoor areas, café).</li>
+          <li>⛪ <strong>12:00</strong> — Church of St Mary & Rack Isle Nature Reserve.</li>
+          <li>🥪 <strong>13:00</strong> — Lunch break in Bibury.</li>
+          <li>🚌 <strong>14:00</strong> — Coach to Bourton-on-the-Water (scenic drive).</li>
+          <li>🕐 <strong>14:45</strong> — Arrive Bourton; free time & attractions.</li>
+          <li>🦚 <strong>15:00</strong> — Birdland Park & Gardens.</li>
+          <li>🚗 <strong>15:45</strong> — Cotswold Motoring Museum & Toy Collection.</li>
+          <li>🏘️ <strong>16:15</strong> — The Model Village.</li>
+          <li>🌸 <strong>16:45</strong> — Cotswold Perfumery (guided tour).</li>
+          <li>🛍️ <strong>17:15</strong> — Riverside walks, bridges, shops & cafés.</li>
+          <li>🚌 <strong>17:45</strong> — Board coach for London.</li>
+          <li>🥨 Refreshments served on return journey.</li>
+          <li>🕘 <strong>20:30</strong> — Arrive King’s Cross (N1 9AB).</li>
+        </ul>
+
+        <h3>✅ What’s Included</h3>
+        <ul>
+          <li>Return coach travel from Central London</li>
           <li>Friendly group lead</li>
-          <li>Free time for lunch and exploration</li>
+          <li>Snacks & water on both journeys</li>
+          <li>Plenty of free time for lunch, shopping, and photos</li>
         </ul>
-        <h3>📋 Important Information</h3>
-        <ul>
-          <li><strong>Duration:</strong> Full day (≈12 hours)</li>
-          <li><strong>Departure:</strong> Early morning from Central London</li>
-          <li><strong>Return:</strong> Evening (approx 8–9 PM)</li>
-        </ul>
+
+        <p style="margin-top:8px;color:#666"><em>Order of stops may change due to traffic/seasonal events.</em></p>
       </div>
       <div class="modal-footer">
         <div class="price-highlight">£149 <span style="font-size:16px;color:#666;font-weight:400;">per person</span></div>
-        <!-- Modal "Book" goes to Google Form -->
-        <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdVNHOLodVDJWEwMDz82zWruK9bHep6CDavWrJHCLy9hktZcw/viewform?usp=header" target="_blank" rel="noopener">Book This Trip →</a>
+        <a class="btn-primary"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSdVNHOLodVDJWEwMDz82zWruK9bHep6CDavWrJHCLy9hktZcw/viewform?usp=header"
+           target="_blank" rel="noopener">Book This Trip →</a>
       </div>
     </div>
   </div>
@@ -413,11 +465,11 @@
       <div class="footer-section">
         <h3>Popular Destinations</h3>
         <ul>
-          <li><a href="#trips">Wales</a></li>
-          <li><a href="#trips">Snowdonia</a></li>
-          <li><a href="#trips">Welsh Castles</a></li>
-          <li><a href="#trips">Cardiff</a></li>
-          <li><a href="#trips">North Wales</a></li>
+          <li><a href="#trips">Cotswolds</a></li>
+          <li><a href="#trips">Bibury</a></li>
+          <li><a href="#trips">Bourton-on-the-Water</a></li>
+          <li><a href="#trips">Stow-on-the-Wold</a></li>
+          <li><a href="#trips">Broadway Tower</a></li>
         </ul>
       </div>
 
@@ -442,6 +494,9 @@
   </footer>
 
   <!-- WhatsApp -->
-  <a href="https://wa.me/447776696094?text=Hi%20Manjummel%20Travels!%20I%27m%20interested%20in%20your%20day%20trips." class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp"><span style="font-size:32px;">💬</span></a>
+  <a href="https://wa.me/447776696094?text=Hi%20Manjummel%20Travels!%20I%27m%20interested%20in%20your%20day%20trips."
+     class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+     <span style="font-size:32px;">💬</span>
+  </a>
 </body>
 </html>
