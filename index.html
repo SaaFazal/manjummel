@@ -156,11 +156,33 @@
     .social-icons a:hover{background:#16a085}
     .footer-bottom{max-width:1200px;margin:0 auto;padding-top:30px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;font-size:14px;color:#adb5bd}
 
-    .whatsapp-float{position:fixed;width:60px;height:60px;bottom:30px;right:30px;background:#25d366;color:#fff;border-radius:50%;text-align:center;font-size:30px;box-shadow:2px 2px 15px rgba(0,0,0,.3);z-index:900;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;text-decoration:none}
-    .whatsapp-float:hover{transform:scale(1.1)}
+    /* Floating buttons (IG + WhatsApp) — always on top */
+    .instagram-float,
+    .whatsapp-float{
+      position:fixed; width:60px; height:60px; right:30px;
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      box-shadow:2px 2px 15px rgba(0,0,0,.3); cursor:pointer; text-decoration:none;
+      z-index:5000;
+    }
+    .instagram-float{
+      bottom:110px;
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      color:#fff; transition:transform .2s ease;
+    }
+    .instagram-float:hover{ transform:scale(1.08) }
+    .instagram-float svg{ width:28px; height:28px; fill:#fff; display:block }
+    .whatsapp-float{
+      bottom:30px;
+      background:#25d366; color:#fff; font-size:30px;
+    }
+    @media (max-width:480px){
+      .instagram-float{ bottom:100px; right:24px; width:56px; height:56px }
+      .instagram-float svg{ width:26px; height:26px }
+      .whatsapp-float{ right:24px; width:56px; height:56px; font-size:28px }
+    }
 
-    /* Modal (smaller + scrollable + above chat bubble) */
-    .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px}
+    /* Modal (smaller + scrollable) */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:4000;padding:20px}
     .modal.active{display:flex}
     .modal-content{
       background:#fff; width:100%; max-width:680px; max-height:85vh;
@@ -173,10 +195,11 @@
     .close-modal{position:absolute;border:none;background:transparent;font-size:28px;line-height:1;cursor:pointer;right:16px;top:10px}
     .tight-list li{margin:6px 0}
 
-    /* Instagram SVG icon (re-usable) */
+    /* Instagram glyph reuse */
     .ig svg{width:20px;height:20px;display:block}
-    .ig {display:inline-flex;align-items:center;justify-content:center}
+    .ig{display:inline-flex;align-items:center;justify-content:center}
     .ig span{font-weight:600}
+
     @media (max-width:768px){
       .hero h1{font-size:36px}
       .hero p{font-size:16px}
@@ -192,13 +215,13 @@
   </style>
 
   <script>
-    /* Modal controls */
+    // Modal controls
     function openTripDetails(e){ if(e) e.preventDefault(); document.getElementById('tripModal').classList.add('active'); document.body.style.overflow='hidden'; }
     function closeTripDetails(){ document.getElementById('tripModal').classList.remove('active'); document.body.style.overflow='auto'; }
     window.addEventListener('click',(ev)=>{const m=document.getElementById('tripModal'); if(ev.target===m) closeTripDetails()});
     document.addEventListener('keydown',(ev)=>{if(ev.key==='Escape') closeTripDetails()});
 
-    /* Slider */
+    // Simple slider buttons
     document.addEventListener('DOMContentLoaded', () => {
       const track = document.querySelector('.slides');
       const prev  = document.querySelector('.slider .prev');
@@ -209,28 +232,7 @@
       }
     });
 
-/* Floating Instagram button */
-.instagram-float{
-  position:fixed; width:60px; height:60px;
-  bottom:100px; /* sits above WhatsApp */
-  right:30px;
-  border-radius:50%;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  color:#fff; text-decoration:none;
-  display:flex; align-items:center; justify-content:center;
-  font-size:28px;
-  box-shadow:2px 2px 15px rgba(0,0,0,.3);
-  z-index:900; cursor:pointer; transition:transform .2s ease;
-}
-.instagram-float:hover{ transform:scale(1.08) }
-.instagram-float svg{ width:28px; height:28px; display:block; fill:#fff }
-@media (max-width:480px){
-  .instagram-float{ bottom:96px; right:24px; width:56px; height:56px }
-  .instagram-float svg{ width:26px; height:26px }
-}
-
-
-    /* Poster click: go to Trips then open modal */
+    // Poster click => scroll to trips then open modal
     function openPosterToDetails(e){
       e.preventDefault();
       document.getElementById('trips').scrollIntoView({behavior:'smooth', block:'start'});
@@ -248,7 +250,6 @@
       </div>
       <div>
         <a class="ig" href="https://instagram.com/manjummeltravels" target="_blank" rel="noopener" aria-label="Instagram">
-          <!-- IG SVG -->
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 2.2A3.8 3.8 0 1 0 15.8 13 3.8 3.8 0 0 0 12 9.2zM18.5 6a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 18.5 6z"/></svg>
           <span>Instagram</span>
         </a>
@@ -296,7 +297,6 @@
     <div class="slider">
       <button class="nav prev" aria-label="Previous">‹</button>
       <div class="slides">
-        <!-- Cotswolds poster (add assets/cotswold-cover.jpg) -->
         <a href="#trips" class="slide" onclick="openPosterToDetails(event)" title="Cotswolds — view details">
           <img src="assets/cotswold-cover.jpg" alt="Cotswolds poster">
           <div class="label">Cotswolds — Tap for Details</div>
@@ -620,20 +620,19 @@
       </div>
     </div>
   </footer>
-<!-- Floating Instagram -->
-<a href="https://instagram.com/manjummeltravels"
-   class="instagram-float" target="_blank" rel="noopener"
-   aria-label="Open Instagram profile">
-  <!-- IG glyph -->
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 2.2A3.8 3.8 0 1 0 15.8 13 3.8 3.8 0 0 0 12 9.2zM18.5 6a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 18.5 6z"/>
-  </svg>
-</a>
 
+  <!-- Floating Instagram -->
+  <a href="https://instagram.com/manjummeltravels"
+     class="instagram-float" target="_blank" rel="noopener"
+     aria-label="Open Instagram profile">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 2.2A3.8 3.8 0 1 0 15.8 13 3.8 3.8 0 0 0 12 9.2zM18.5 6a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 18.5 6z"/>
+    </svg>
+  </a>
 
   <!-- WhatsApp -->
   <a href="https://wa.me/447823725401?text=Hi%20Manjummel%20Travels!%20I%27m%20interested%20in%20your%20day%20trips."
-     class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+     class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp" aria-label="Open WhatsApp chat">
      <span style="font-size:32px;">💬</span>
   </a>
 </body>
