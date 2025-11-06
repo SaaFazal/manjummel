@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- SEO & social -->
+  <link rel="canonical" href="https://manjummeltravels.com/">
+  <meta name="description" content="Cotswolds day trips from London — Bibury, Bourton-on-the-Water, village walks, snacks included. Book now.">
+  <meta property="og:title" content="Manjummel Travels — Cotswolds Day Trip">
+  <meta property="og:description" content="Honey-stone villages, rolling hills, and storybook lanes.">
+  <meta property="og:image" content="https://manjummeltravels.com/assets/cotswold-cover.jpg">
+  <meta property="og:url" content="https://manjummeltravels.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.ico">
+
   <title>Manjummel Travels - UK Day Trips & Excursions</title>
+
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -12,7 +25,7 @@
     /* Top bar + nav */
     .top-bar{background:#16a085;color:#fff;padding:10px 0;font-size:14px}
     .top-bar .container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
-    .top-bar a{color:#fff;text-decoration:none;margin-right:20px}
+    .top-bar a{color:#fff;text-decoration:none;margin-right:20px;display:inline-flex;align-items:center;gap:6px}
 
     nav{background:#fff;padding:20px 0;box-shadow:0 2px 5px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}
     nav .container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
@@ -20,7 +33,7 @@
     .logo-img{height:44px;width:auto;display:block}
     .logo-text h1{font-size:20px;color:#333;line-height:1.2;margin:0}
     .logo-text p{font-size:12px;color:#666;margin-top:2px}
-    nav ul{display:flex;list-style:none;gap:30px;align-items:center}
+    nav ul{display:flex;list-style:none;gap:22px;align-items:center}
     nav a{text-decoration:none;color:#333;font-weight:500;transition:color .3s}
     nav a:hover,nav a.active{color:#16a085}
 
@@ -42,40 +55,34 @@
 
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
-   /* Upcoming slider */
-.upcoming{background:#fff;padding:50px 20px 20px}
-.upcoming .title{font-size:28px;font-weight:700;text-align:center}
-.slider{position:relative;margin:20px auto 0;max-width:1100px}
-.slides{
-  display:flex;gap:20px;overflow:hidden;scroll-behavior:smooth;
-  justify-content:center; /* center the active poster */
-  padding:0 56px; /* space for arrows so they don’t overlap poster */
-}
-.slide{
-  flex:0 0 85%; max-width:900px; border-radius:16px; position:relative;
-  box-shadow:0 10px 24px rgba(0,0,0,.12); background:#000; overflow:hidden;
-}
-.slide img{
-  width:100%; aspect-ratio:16/9; height:auto; object-fit:cover; display:block;
-  transform: translateZ(0); /* fixes subpixel blur on some devices */
-}
-.slide .label{
-  position:absolute; left:16px; bottom:16px;
-  background:rgba(0,0,0,.55); color:#fff; padding:8px 12px; border-radius:8px; font-weight:600
-}
-.slider .nav{
-  position:absolute; top:50%; transform:translateY(-50%);
-  width:46px; height:46px; border-radius:50%; border:none; cursor:pointer;
-  background:#fff; box-shadow:0 6px 16px rgba(0,0,0,.2); font-size:18px; z-index:2
-}
-.slider .prev{left:6px}
-.slider .next{right:6px}
-
-@media (max-width:768px){
-  .slide{flex:0 0 92%}
-  .slides{padding:0 48px}
-}
-
+    /* Upcoming slider */
+    .upcoming{background:#fff;padding:50px 20px 20px}
+    .upcoming .title{font-size:28px;font-weight:700;text-align:center}
+    .slider{position:relative;margin:20px auto 0;max-width:1100px}
+    .slides{
+      display:flex;gap:20px;overflow:hidden;scroll-behavior:smooth;
+      justify-content:center;
+      padding:0 56px; /* space for arrows */
+    }
+    .slide{
+      flex:0 0 85%; max-width:900px; border-radius:16px; position:relative;
+      box-shadow:0 10px 24px rgba(0,0,0,.12); background:#000; overflow:hidden;
+    }
+    .slide img{
+      width:100%; aspect-ratio:16/9; height:auto; object-fit:cover; display:block;
+      transform: translateZ(0);
+    }
+    .slide .label{
+      position:absolute; left:16px; bottom:16px;
+      background:rgba(0,0,0,.55); color:#fff; padding:8px 12px; border-radius:8px; font-weight:600
+    }
+    .slider .nav{
+      position:absolute; top:50%; transform:translateY(-50%);
+      width:46px; height:46px; border-radius:50%; border:none; cursor:pointer;
+      background:#fff; box-shadow:0 6px 16px rgba(0,0,0,.2); font-size:18px; z-index:2
+    }
+    .slider .prev{left:6px}
+    .slider .next{right:6px}
 
     /* Features */
     .features{padding:60px 20px;background:#f8f9fa}
@@ -105,7 +112,19 @@
     .trip-price small{display:block;color:#888;font-weight:500;margin-top:2px}
     .view-all{text-align:center;margin-top:50px}
 
-    /* About + terms + footer (unchanged styling except included earlier) */
+    /* FAQ */
+    .faq{padding:70px 20px;background:#fff}
+    .faq .wrap{max-width:900px;margin:0 auto}
+    .faq h2{text-align:center;font-size:36px;margin-bottom:28px}
+    .faq p.lead{text-align:center;color:#666;margin-bottom:28px}
+    .faq details{border:1px solid #eee;border-radius:10px;padding:14px 16px;margin:10px 0;box-shadow:0 1px 6px rgba(0,0,0,.04);background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq details[open]{background:#f8f9fa}
+    .faq details p{margin-top:10px;color:#444}
+    .faq .cta{text-align:center;margin-top:18px}
+
+    /* About + terms + footer */
     .about-hero{background:linear-gradient(135deg,#16a085 0%,#138f75 100%);color:#fff;padding:100px 20px;text-align:center}
     .about-hero h1{font-size:48px;margin-bottom:20px}
     .about-hero p{font-size:20px;max-width:700px;margin:0 auto;opacity:.95}
@@ -141,19 +160,23 @@
     .whatsapp-float:hover{transform:scale(1.1)}
 
     /* Modal (smaller + scrollable + above chat bubble) */
-	.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px}
-	.modal.active{display:flex}
-	.modal-content{
-	  background:#fff; width:100%; max-width:680px; max-height:85vh;
-	  border-radius:10px; box-shadow:0 10px 40px rgba(0,0,0,.25); overflow:hidden; position:relative;
-	  display:flex; flex-direction:column; /* key: header / body / footer layout */
-	}
-	.modal-header{padding:20px 24px;border-bottom:1px solid #eee;flex:0 0 auto}
-	.modal-body{padding:20px 24px;flex:1 1 auto;overflow:auto} /* only body scrolls */
-	.modal-footer{padding:16px 24px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between;flex:0 0 auto}
-	.close-modal{position:absolute;border:none;background:transparent;font-size:28px;line-height:1;cursor:pointer;right:16px;top:10px}
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px}
+    .modal.active{display:flex}
+    .modal-content{
+      background:#fff; width:100%; max-width:680px; max-height:85vh;
+      border-radius:10px; box-shadow:0 10px 40px rgba(0,0,0,.25); overflow:hidden; position:relative;
+      display:flex; flex-direction:column;
+    }
+    .modal-header{padding:20px 24px;border-bottom:1px solid #eee;flex:0 0 auto}
+    .modal-body{padding:20px 24px;flex:1 1 auto;overflow:auto}
+    .modal-footer{padding:16px 24px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between;flex:0 0 auto}
+    .close-modal{position:absolute;border:none;background:transparent;font-size:28px;line-height:1;cursor:pointer;right:16px;top:10px}
     .tight-list li{margin:6px 0}
 
+    /* Instagram SVG icon (re-usable) */
+    .ig svg{width:20px;height:20px;display:block}
+    .ig {display:inline-flex;align-items:center;justify-content:center}
+    .ig span{font-weight:600}
     @media (max-width:768px){
       .hero h1{font-size:36px}
       .hero p{font-size:16px}
@@ -163,8 +186,8 @@
       .footer-content{grid-template-columns:1fr}
       .footer-bottom{flex-direction:column;gap:20px;text-align:center}
       .section-header h2{font-size:32px}
-      .slide{min-width:88%}
-      .slide img{height:300px}
+      .slide{flex:0 0 92%}
+      .slides{padding:0 48px}
     }
   </style>
 
@@ -181,16 +204,36 @@
       const prev  = document.querySelector('.slider .prev');
       const next  = document.querySelector('.slider .next');
       if(track){
-        next.addEventListener('click', () => track.scrollBy({left: track.clientWidth*0.8, behavior:'smooth'}));
-        prev.addEventListener('click', () => track.scrollBy({left: -track.clientWidth*0.8, behavior:'smooth'}));
+        if(next) next.addEventListener('click', () => track.scrollBy({left: track.clientWidth*0.8, behavior:'smooth'}));
+        if(prev) prev.addEventListener('click', () => track.scrollBy({left: -track.clientWidth*0.8, behavior:'smooth'}));
       }
     });
+
+/* Floating Instagram button */
+.instagram-float{
+  position:fixed; width:60px; height:60px;
+  bottom:100px; /* sits above WhatsApp */
+  right:30px;
+  border-radius:50%;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color:#fff; text-decoration:none;
+  display:flex; align-items:center; justify-content:center;
+  font-size:28px;
+  box-shadow:2px 2px 15px rgba(0,0,0,.3);
+  z-index:900; cursor:pointer; transition:transform .2s ease;
+}
+.instagram-float:hover{ transform:scale(1.08) }
+.instagram-float svg{ width:28px; height:28px; display:block; fill:#fff }
+@media (max-width:480px){
+  .instagram-float{ bottom:96px; right:24px; width:56px; height:56px }
+  .instagram-float svg{ width:26px; height:26px }
+}
+
 
     /* Poster click: go to Trips then open modal */
     function openPosterToDetails(e){
       e.preventDefault();
       document.getElementById('trips').scrollIntoView({behavior:'smooth', block:'start'});
-      // small delay so scroll feels natural, then open modal
       setTimeout(openTripDetails, 300);
     }
   </script>
@@ -200,10 +243,16 @@
   <div class="top-bar">
     <div class="container">
       <div>
-        <a href="tel:+447776696094">📞 +44 7776 696094</a>
+        <a href="tel:+447823725401">📞 +44 7823 725401</a>
         <a href="mailto:manjummeltravels@gmail.com">✉️ manjummeltravels@gmail.com</a>
       </div>
-      <div>📍 Serving all of London</div>
+      <div>
+        <a class="ig" href="https://instagram.com/manjummeltravels" target="_blank" rel="noopener" aria-label="Instagram">
+          <!-- IG SVG -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 2.2A3.8 3.8 0 1 0 15.8 13 3.8 3.8 0 0 0 12 9.2zM18.5 6a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 18.5 6z"/></svg>
+          <span>Instagram</span>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -220,6 +269,7 @@
       <ul>
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#trips">Our Trips</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#terms">Terms</a></li>
         <li><a href="#trips" class="btn-primary">Book a Trip</a></li>
@@ -251,18 +301,6 @@
           <img src="assets/cotswold-cover.jpg" alt="Cotswolds poster">
           <div class="label">Cotswolds — Tap for Details</div>
         </a>
-
-        <!-- Example placeholders for future posters (you can duplicate and update images/labels/links) -->
-        <!--
-        <a href="#" class="slide" title="Oxford & Blenheim — coming soon">
-          <img src="assets/oxford-cover.jpg" alt="Oxford poster">
-          <div class="label">Oxford & Blenheim (Soon)</div>
-        </a>
-        <a href="#" class="slide" title="Bath & Stonehenge — coming soon">
-          <img src="assets/bath-cover.jpg" alt="Bath poster">
-          <div class="label">Bath & Stonehenge (Soon)</div>
-        </a>
-        -->
       </div>
       <button class="nav next" aria-label="Next">›</button>
     </div>
@@ -290,7 +328,7 @@
 
       <div class="trips-grid">
         <div class="trip-card">
-<div class="trip-image" style="background-image:url('assets/cotswold-title.jpg')">
+          <div class="trip-image" style="background-image:url('assets/cotswold-title.jpg')">
             <div class="trip-tag">village charm</div>
           </div>
           <div class="trip-content">
@@ -329,8 +367,8 @@
 
         <h3>📍 Places to Visit</h3>
         <ul>
-          <li><strong>Bibury</strong> — <em>Arlington Row</em> (14th-century cottages; iconic photo spot), <em>Bibury Trout Farm</em> (one of the UK’s oldest, with café and outdoor areas), <em>Church of St Mary</em> (11th-century Grade I), and <em>Rack Isle Nature Reserve</em> (wildflowers, birdlife, medieval wool-drying history).</li>
-          <li><strong>Bourton-on-the-Water</strong> — <em>Birdland Park & Gardens</em> (500+ birds incl. penguins, flamingos, parrots), <em>Cotswold Motoring Museum & Toy Collection</em>, <em>The Model Village</em> (1/9-scale stone replica), <em>Cotswold Perfumery</em>, plus riverside walks over 18th-century bridges along the River Windrush.</li>
+          <li><strong>Bibury</strong> — <em>Arlington Row</em>, <em>Bibury Trout Farm</em>, <em>Church of St Mary</em>, <em>Rack Isle Nature Reserve</em>.</li>
+          <li><strong>Bourton-on-the-Water</strong> — <em>Birdland</em>, <em>Motoring Museum</em>, <em>Model Village</em>, <em>Cotswold Perfumery</em>, riverside walks.</li>
         </ul>
 
         <h3>🧭 Itinerary (typical day)</h3>
@@ -338,16 +376,16 @@
           <li>🕗 <strong>08:00</strong> — Depart London King’s Cross (arrive 15 mins early).</li>
           <li>🥨 Snacks provided on the coach (outbound & return).</li>
           <li>🕙 <strong>10:30</strong> — Arrive Bibury; Arlington Row photos.</li>
-          <li>🏞️ <strong>10:45</strong> — Bibury Trout Farm (outdoor areas & café).</li>
-          <li>⛪ <strong>12:00</strong> — Church of St Mary & Rack Isle Nature Reserve.</li>
-          <li>🥪 <strong>13:00</strong> — Lunch break in Bibury.</li>
-          <li>🚌 <strong>14:00</strong> — Coach to Bourton-on-the-Water (scenic drive).</li>
-          <li>🕐 <strong>14:45</strong> — Free time & attractions in Bourton.</li>
+          <li>🏞️ <strong>10:45</strong> — Bibury Trout Farm.</li>
+          <li>⛪ <strong>12:00</strong> — Church of St Mary & Rack Isle.</li>
+          <li>🥪 <strong>13:00</strong> — Lunch in Bibury.</li>
+          <li>🚌 <strong>14:00</strong> — Coach to Bourton-on-the-Water.</li>
+          <li>🕐 <strong>14:45</strong> — Free time & attractions.</li>
           <li>🦚 <strong>15:00</strong> — Birdland.</li>
           <li>🚗 <strong>15:45</strong> — Motoring Museum.</li>
           <li>🏘️ <strong>16:15</strong> — Model Village.</li>
-          <li>🌸 <strong>16:45</strong> — Cotswold Perfumery (guided tour).</li>
-          <li>🛍️ <strong>17:15</strong> — Riverside walks, bridges, shops & cafés.</li>
+          <li>🌸 <strong>16:45</strong> — Cotswold Perfumery.</li>
+          <li>🛍️ <strong>17:15</strong> — Riverside walks & shops.</li>
           <li>🚌 <strong>17:45</strong> — Board coach for London.</li>
           <li>🕘 <strong>20:30</strong> — Arrive King’s Cross.</li>
         </ul>
@@ -360,6 +398,53 @@
       </div>
     </div>
   </div>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2>Frequently Asked Questions</h2>
+      <p class="lead">Everything you need to know before you book your Cotswolds day trip.</p>
+
+      <details>
+        <summary>Where do we depart from and what time?</summary>
+        <p>We depart from London King’s Cross (N1 9AB) at <strong>08:00</strong>. Please arrive at least 15 minutes early for check-in.</p>
+      </details>
+
+      <details>
+        <summary>What’s included in the price?</summary>
+        <p>Return coach travel from London, friendly group lead, and snacks/water both ways. Attraction entry fees are not included unless specified.</p>
+      </details>
+
+      <details>
+        <summary>What should I bring?</summary>
+        <p>Comfortable walking shoes, weather-appropriate clothing, a phone/camera, and some cash/card for lunch or souvenirs.</p>
+      </details>
+
+      <details>
+        <summary>Are children allowed?</summary>
+        <p>Yes! Under-16s must be accompanied by a responsible adult. Child seats must be requested in advance if required.</p>
+      </details>
+
+      <details>
+        <summary>What’s your cancellation policy?</summary>
+        <p>Free cancellation up to 48 hours before departure. Within 48 hours or no-show is non-refundable. One free date change up to 48 hours pre-departure (subject to availability).</p>
+      </details>
+
+      <details>
+        <summary>Accessibility</summary>
+        <p>Some locations may have uneven terrain. Please share any mobility needs in advance so we can advise and assist.</p>
+      </details>
+
+      <details>
+        <summary>How do I book?</summary>
+        <p>Tap <a href="#book">Book Now</a> to go to our Google Form. You’ll receive a confirmation by email/WhatsApp after we process your request.</p>
+      </details>
+
+      <div class="cta">
+        <a class="btn-primary" href="#book">Ready to go? Book now →</a>
+      </div>
+    </div>
+  </section>
 
   <!-- About -->
   <section class="about-hero" id="about">
@@ -410,7 +495,7 @@
       <h3>Who We Are</h3>
       <p><strong>Manjummel Travels</strong> — your trusted provider of authentic UK Tamil travel experiences.<br>
       Email: <a href="mailto:manjummeltravels@gmail.com">manjummeltravels@gmail.com</a> ·
-      Phone/WhatsApp: <a href="tel:+447776696094">+44 7776 696094</a></p>
+      Phone/WhatsApp: <a href="tel:+447823725401">+44 7823 725401</a></p>
 
       <h3>Scope of Terms</h3>
       <p>These terms apply to all trips, tours, and travel packages booked via our website, email, phone, or WhatsApp.</p>
@@ -433,8 +518,8 @@
 
       <h3>Cancellations & Date Changes</h3>
       <ul>
-        <li>Cancel 48+ hours before departure: full refund.</li>
-        <li>Cancel within 48 hours or no-show: non-refundable.</li>
+        <li>Free cancellation up to 48 hours before departure.</li>
+        <li>Within 48 hours or no-show: non-refundable.</li>
         <li>One free date change up to 48 hours pre-departure (subject to availability).</li>
       </ul>
 
@@ -442,7 +527,7 @@
       <ul>
         <li>We may adjust timings/routes for safety, traffic, or weather.</li>
         <li>If we cancel, choose a full refund or a free reschedule.</li>
-        <li>We are not responsible for extra costs beyond the trip fee (hotels, onward travel, etc.).</li>
+        <li>We are not responsible for extra costs beyond the trip fee.</li>
       </ul>
 
       <h3>Minimum Numbers & Punctuality</h3>
@@ -475,28 +560,6 @@
 
       <h3>Insurance</h3>
       <p>We recommend personal travel insurance covering cancellations, health, and valuables.</p>
-
-      <h3>Photography & Media</h3>
-      <p>Photos/videos may be taken for promotional use. Tell your guide if you do not consent.</p>
-
-      <h3>Complaints & Feedback</h3>
-      <p>Raise issues on-trip for immediate help. For post-trip concerns, email us within 7 days with your booking reference.</p>
-
-      <h3>Liability</h3>
-      <p>We do not limit liability for death/personal injury due to our negligence/fraud. Otherwise, liability is limited to the trip fee, as permitted by law.</p>
-
-      <h3>Governing Law</h3>
-      <p>England & Wales law; exclusive jurisdiction of their courts.</p>
-
-      <h3>Privacy, Data, & Cookies (UK GDPR)</h3>
-      <ul>
-        <li><strong>What we collect:</strong> name, email, phone, preferences, dietary info. Payments handled by Stripe/PayPal; we do not store card details.</li>
-        <li><strong>How we use it:</strong> booking management, safety/service improvements, and — with consent — marketing (unsubscribe anytime).</li>
-        <li><strong>Sharing:</strong> trusted providers (e.g., Google Workspace, Stripe, PayPal) under contract.</li>
-        <li><strong>Retention:</strong> booking records kept for up to 4 weeks then deleted.</li>
-        <li><strong>Your rights:</strong> access, correction, deletion, restriction — contact us. You may also complain to the ICO.</li>
-        <li><strong>Cookies:</strong> used for basic site operation and analytics; manage via your browser.</li>
-      </ul>
     </div>
   </section>
 
@@ -509,7 +572,11 @@
           <div class="logo-text"><h3>Manjummel Travels</h3><p>UK Day Trips</p></div>
         </div>
         <p style="margin-top:20px;">Discover the beauty of Britain with our friendly, community-style day trips from London.</p>
-        <div class="social-icons"><a href="#">f</a><a href="#">📷</a><a href="#">🐦</a></div>
+        <div class="social-icons">
+          <a class="ig" href="https://instagram.com/manjummeltravels" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 2.2A3.8 3.8 0 1 0 15.8 13 3.8 3.8 0 0 0 12 9.2zM18.5 6a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 18.5 6z"/></svg>
+          </a>
+        </div>
       </div>
 
       <div class="footer-section">
@@ -517,6 +584,7 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#trips">Our Trips</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#terms">Terms & Policies</a></li>
         </ul>
@@ -536,9 +604,9 @@
       <div class="footer-section">
         <h3>Contact Us</h3>
         <ul>
-          <li><a href="tel:+447776696094">📞 +44 7776 696094</a></li>
+          <li><a href="tel:+447823725401">📞 +44 7823 725401</a></li>
           <li><a href="mailto:manjummeltravels@gmail.com">✉️ manjummeltravels@gmail.com</a></li>
-          <li>📍 Central London, UK</li>
+          <li>📍 United Kingdom</li>
         </ul>
       </div>
     </div>
@@ -552,9 +620,19 @@
       </div>
     </div>
   </footer>
+<!-- Floating Instagram -->
+<a href="https://instagram.com/manjummeltravels"
+   class="instagram-float" target="_blank" rel="noopener"
+   aria-label="Open Instagram profile">
+  <!-- IG glyph -->
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 2.2A3.8 3.8 0 1 0 15.8 13 3.8 3.8 0 0 0 12 9.2zM18.5 6a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 18.5 6z"/>
+  </svg>
+</a>
+
 
   <!-- WhatsApp -->
-  <a href="https://wa.me/447776696094?text=Hi%20Manjummel%20Travels!%20I%27m%20interested%20in%20your%20day%20trips."
+  <a href="https://wa.me/447823725401?text=Hi%20Manjummel%20Travels!%20I%27m%20interested%20in%20your%20day%20trips."
      class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
      <span style="font-size:32px;">💬</span>
   </a>
