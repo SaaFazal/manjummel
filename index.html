@@ -6,7 +6,10 @@
   <title>Manjummel Travels - UK Day Trips & Excursions</title>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;background:#fff}
+
+    /* Top bar + nav */
     .top-bar{background:#16a085;color:#fff;padding:10px 0;font-size:14px}
     .top-bar .container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
     .top-bar a{color:#fff;text-decoration:none;margin-right:20px}
@@ -20,13 +23,16 @@
     nav ul{display:flex;list-style:none;gap:30px;align-items:center}
     nav a{text-decoration:none;color:#333;font-weight:500;transition:color .3s}
     nav a:hover,nav a.active{color:#16a085}
-    .btn-primary{background:#16a085;color:#fff;padding:12px 30px;border-radius:5px;text-decoration:none;font-weight:600;transition:background .3s;border:none;cursor:pointer}
+
+    /* Buttons */
+    .btn-primary{background:#16a085;color:#fff;padding:12px 30px;border-radius:5px;text-decoration:none;font-weight:600;transition:background .3s;border:none;cursor:pointer;display:inline-block}
     .btn-primary:hover{background:#138f75}
     .btn-secondary{background:transparent;color:#fff;padding:12px 30px;border:2px solid #fff;border-radius:5px;text-decoration:none;font-weight:600;transition:all .3s;display:inline-block}
     .btn-secondary:hover{background:#fff;color:#16a085}
     .btn-outline{border:2px solid #16a085;color:#16a085;padding:10px 25px;border-radius:5px;text-decoration:none;font-weight:600;transition:all .3s;display:inline-block}
     .btn-outline:hover{background:#16a085;color:#fff}
 
+    /* Hero */
     .hero{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80');background-size:cover;background-position:center;color:#fff;text-align:center;padding:150px 20px;min-height:560px;display:flex;align-items:center;justify-content:center}
     .hero-content{max-width:900px}
     .badge{background:#16a085;color:#fff;padding:8px 20px;border-radius:20px;display:inline-block;margin-bottom:30px;font-size:14px;font-weight:600}
@@ -36,13 +42,27 @@
 
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
-    .features{padding:80px 20px;background:#f8f9fa}
-    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:50px}
+    /* Upcoming slider */
+    .upcoming{background:#fff;padding:50px 20px 20px}
+    .upcoming .title{font-size:28px;font-weight:700;text-align:center}
+    .slider{position:relative;margin:20px auto 0;max-width:1100px}
+    .slides{display:flex;gap:16px;overflow:hidden;scroll-behavior:smooth}
+    .slide{min-width:70%;flex:0 0 70%;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.12);position:relative;background:#000}
+    .slide img{width:100%;height:360px;object-fit:cover;border-radius:14px;display:block;opacity:.95}
+    .slide .label{position:absolute;left:16px;bottom:16px;background:rgba(0,0,0,.55);color:#fff;padding:8px 12px;border-radius:8px;font-weight:600}
+    .slider .nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:#ffffff;box-shadow:0 6px 16px rgba(0,0,0,.2);cursor:pointer;font-size:18px}
+    .slider .prev{left:-10px}
+    .slider .next{right:-10px}
+
+    /* Features */
+    .features{padding:60px 20px;background:#f8f9fa}
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:30px}
     .feature-card{background:#fff;padding:40px 30px;border-radius:10px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.05)}
     .feature-icon{width:80px;height:80px;background:#d4f4eb;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:32px;color:#16a085}
     .feature-card h3{font-size:20px;margin-bottom:15px}
     .feature-card p{color:#666;font-size:15px}
 
+    /* Trips */
     .trips{padding:80px 20px}
     .section-header{text-align:center;margin-bottom:50px}
     .section-header h2{font-size:42px;margin-bottom:15px}
@@ -58,10 +78,11 @@
     .trip-content p{color:#666;margin-bottom:15px;font-size:15px}
     .trip-duration{color:#666;font-size:14px;margin-bottom:20px;display:flex;align-items:center;gap:5px}
     .trip-footer{display:flex;justify-content:space-between;align-items:center;padding-top:15px;border-top:1px solid #eee}
-    .trip-price{color:#16a085;font-size:28px;font-weight:700}
-    .trip-price span{font-size:14px;color:#666;font-weight:400}
+    .trip-price{color:#16a085;font-size:22px;font-weight:800}
+    .trip-price small{display:block;color:#888;font-weight:500;margin-top:2px}
     .view-all{text-align:center;margin-top:50px}
 
+    /* About + terms + footer (unchanged styling except included earlier) */
     .about-hero{background:linear-gradient(135deg,#16a085 0%,#138f75 100%);color:#fff;padding:100px 20px;text-align:center}
     .about-hero h1{font-size:48px;margin-bottom:20px}
     .about-hero p{font-size:20px;max-width:700px;margin:0 auto;opacity:.95}
@@ -72,13 +93,6 @@
     .about-text h2{font-size:32px;margin-bottom:15px;color:#333}
     .about-text p{color:#444;line-height:1.8;margin-bottom:14px;font-size:16px}
 
-    .values-section{background:#f8f9fa;padding:80px 20px}
-    .values-grid{max-width:1200px;margin:50px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-    .value-card{background:#fff;padding:40px 30px;border-radius:10px;text-align:center;box-shadow:0 2px 15px rgba(0,0,0,.08);transition:all .3s}
-    .value-card:hover{transform:translateY(-5px);box-shadow:0 5px 25px rgba(0,0,0,.15)}
-    .value-icon{width:70px;height:70px;background:linear-gradient(135deg,#16a085 0%,#138f75 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;font-size:30px}
-
-    /* Terms */
     .terms{padding:80px 20px;background:#fff}
     .terms .wrap{max-width:1000px;margin:0 auto}
     .terms h2{font-size:42px;margin-bottom:20px;text-align:center}
@@ -103,17 +117,14 @@
     .whatsapp-float{position:fixed;width:60px;height:60px;bottom:30px;right:30px;background:#25d366;color:#fff;border-radius:50%;text-align:center;font-size:30px;box-shadow:2px 2px 15px rgba(0,0,0,.3);z-index:999;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;text-decoration:none}
     .whatsapp-float:hover{transform:scale(1.1)}
 
-    /* Modal + helpers */
+    /* Modal (smaller + scrollable) */
     .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:1000;padding:20px}
     .modal.active{display:flex}
-    .modal-content{background:#fff;max-width:800px;width:100%;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.25);overflow:hidden;position:relative}
-    .modal-header{padding:24px 28px;border-bottom:1px solid #eee}
-    .modal-body{padding:24px 28px}
-    .modal-footer{padding:20px 28px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between}
-    .close-modal{position:absolute;margin-left:auto;border:none;background:transparent;font-size:28px;line-height:1;cursor:pointer;right:24px;top:18px}
-    .simple-table{width:100%;border-collapse:collapse;margin:12px 0 8px}
-    .simple-table th,.simple-table td{border:1px solid #eee;padding:8px 10px;text-align:left;font-size:14px}
-    .simple-table thead th{background:#f8f9fa;font-weight:600}
+    .modal-content{background:#fff;max-width:680px;width:100%;max-height:85vh;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.25);overflow:hidden;position:relative}
+    .modal-header{padding:20px 24px;border-bottom:1px solid #eee}
+    .modal-body{padding:20px 24px;max-height:calc(85vh - 140px);overflow:auto}
+    .modal-footer{padding:16px 24px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between}
+    .close-modal{position:absolute;margin-left:auto;border:none;background:transparent;font-size:28px;line-height:1;cursor:pointer;right:16px;top:10px}
     .tight-list li{margin:6px 0}
 
     @media (max-width:768px){
@@ -125,14 +136,36 @@
       .footer-content{grid-template-columns:1fr}
       .footer-bottom{flex-direction:column;gap:20px;text-align:center}
       .section-header h2{font-size:32px}
+      .slide{min-width:88%}
+      .slide img{height:300px}
     }
   </style>
 
   <script>
-    function openTripDetails(e){e.preventDefault();document.getElementById('tripModal').classList.add('active');document.body.style.overflow='hidden'}
-    function closeTripDetails(){document.getElementById('tripModal').classList.remove('active');document.body.style.overflow='auto'}
+    /* Modal controls */
+    function openTripDetails(e){ if(e) e.preventDefault(); document.getElementById('tripModal').classList.add('active'); document.body.style.overflow='hidden'; }
+    function closeTripDetails(){ document.getElementById('tripModal').classList.remove('active'); document.body.style.overflow='auto'; }
     window.addEventListener('click',(ev)=>{const m=document.getElementById('tripModal'); if(ev.target===m) closeTripDetails()});
     document.addEventListener('keydown',(ev)=>{if(ev.key==='Escape') closeTripDetails()});
+
+    /* Slider */
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.querySelector('.slides');
+      const prev  = document.querySelector('.slider .prev');
+      const next  = document.querySelector('.slider .next');
+      if(track){
+        next.addEventListener('click', () => track.scrollBy({left: track.clientWidth*0.8, behavior:'smooth'}));
+        prev.addEventListener('click', () => track.scrollBy({left: -track.clientWidth*0.8, behavior:'smooth'}));
+      }
+    });
+
+    /* Poster click: go to Trips then open modal */
+    function openPosterToDetails(e){
+      e.preventDefault();
+      document.getElementById('trips').scrollIntoView({behavior:'smooth', block:'start'});
+      // small delay so scroll feels natural, then open modal
+      setTimeout(openTripDetails, 300);
+    }
   </script>
 </head>
 <body>
@@ -180,43 +213,31 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section class="about-hero" id="about">
-    <div class="container">
-      <h1>About Manjummel Travels</h1>
-      <p>Your trusted partner for unforgettable UK day trip experiences from London</p>
-    </div>
-  </section>
+  <!-- Upcoming Trips: Poster Slider -->
+  <section class="upcoming" aria-label="Upcoming trips">
+    <div class="title">Upcoming Trips</div>
+    <div class="slider">
+      <button class="nav prev" aria-label="Previous">‹</button>
+      <div class="slides">
+        <!-- Cotswolds poster (add assets/cotswold-cover.jpg) -->
+        <a href="#trips" class="slide" onclick="openPosterToDetails(event)" title="Cotswolds — view details">
+          <img src="assets/cotswold-cover.jpg" alt="Cotswolds poster">
+          <div class="label">Cotswolds — Tap for Details</div>
+        </a>
 
-  <section class="about-section">
-    <div class="about-content">
-      <div class="about-grid">
-        <div class="about-image" style="background-image:url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80')"></div>
-        <div class="about-text">
-          <h2>About Our Company</h2>
-          <p>At <strong>Manjummel Travels</strong>, we’re more than a travel service — we’re creators of exceptional adventures for the UK Tamil community and all who seek memorable journeys. What started as a dream to discover Britain with friends has grown into a trusted travel provider, offering authentic, comfortable, and adventure-filled experiences.</p>
-
-          <h2>Our Philosophy</h2>
-          <p>We believe the best journeys are about connection — from exploring Durdle Door to sharing moments in scenic countryside and vibrant cities. Each trip is thoughtfully curated to foster lasting friendships and unforgettable experiences for Tamil families, friends, and solo travelers.</p>
-
-          <h2>Why Choose Manjummel Travels?</h2>
-          <p><strong>Curated Itineraries</strong> — Beautiful trips that blend iconic UK landscapes with authentic Tamil community flavour.</p>
-          <p><strong>Group Travel with a Difference</strong> — Warm, welcoming group adventures designed for genuine conversation, cultural sharing, and social connection.</p>
-          <p><strong>Budget-Friendly Comfort</strong> — Great value journeys — always affordable, always high quality.</p>
-          <p><strong>Timeless Memories</strong> — We capture moments, nurture friendships, and make every experience unforgettable.</p>
-
-          <p>Join us as we redefine Tamil travel in the UK — making every journey special, no matter how near or far. Book your spot and explore with us for authentic Tamil hospitality and lifelong memories!</p>
-        </div>
+        <!-- Example placeholders for future posters (you can duplicate and update images/labels/links) -->
+        <!--
+        <a href="#" class="slide" title="Oxford & Blenheim — coming soon">
+          <img src="assets/oxford-cover.jpg" alt="Oxford poster">
+          <div class="label">Oxford & Blenheim (Soon)</div>
+        </a>
+        <a href="#" class="slide" title="Bath & Stonehenge — coming soon">
+          <img src="assets/bath-cover.jpg" alt="Bath poster">
+          <div class="label">Bath & Stonehenge (Soon)</div>
+        </a>
+        -->
       </div>
-
-      <div class="about-grid" style="margin-top:40px;">
-        <div class="about-text">
-          <h2>Our Commitment</h2>
-          <p>We’re committed to providing exceptional service, creating memorable experiences, and making the beauty of the UK accessible to all. From careful planning to friendly on-trip support, our team looks after every detail.</p>
-          <div style="margin-top:20px;"><a href="#trips" class="btn-primary">Explore Our Trips</a></div>
-        </div>
-        <div class="about-image" style="background-image:url('https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=800&q=80')"></div>
-      </div>
+      <button class="nav next" aria-label="Next">›</button>
     </div>
   </section>
 
@@ -224,15 +245,15 @@
   <section class="features">
     <div class="container">
       <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon">📍</div><h3>UK Destinations</h3><p>Carefully selected locations across England & Wales</p></div>
-        <div class="feature-card"><div class="feature-icon">🕐</div><h3>Day Trips</h3><p>Return the same day — perfect for busy schedules</p></div>
-        <div class="feature-card"><div class="feature-icon">👥</div><h3>Friendly Groups</h3><p>Welcoming community vibes on every trip</p></div>
+        <div class="feature-card"><div class="feature-icon">🚌</div><h3>Comfort Coach</h3><p>Modern coach with friendly guide</p></div>
+        <div class="feature-card"><div class="feature-icon">🥨</div><h3>Snacks & Water</h3><p>Included both ways</p></div>
+        <div class="feature-card"><div class="feature-icon">🎶</div><h3>Community Vibes</h3><p>Music, games & Tamil hospitality</p></div>
         <div class="feature-card"><div class="feature-icon">⭐</div><h3>Great Value</h3><p>Transparent pricing with no surprises</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Trips (COTSWOLDS) -->
+  <!-- Trips (Cotswolds) -->
   <section class="trips" id="trips">
     <div class="container">
       <div class="section-header">
@@ -248,16 +269,18 @@
           <div class="trip-content">
             <div class="trip-location">📍 Cotswolds, England</div>
             <h3>Cotswolds Escape</h3>
-            <p>Visit Bibury’s Arlington Row, riverside Bourton-on-the-Water, and more picture-perfect Cotswold villages in one relaxed day.</p>
+            <p>Visit Bibury’s Arlington Row, riverside Bourton-on-the-Water, and more picture-perfect villages in one relaxed day.</p>
             <div class="trip-duration">🕐 1 Day</div>
             <div class="trip-footer">
-              <div class="trip-price"><span>From</span> £149</div>
+              <div class="trip-price">£45 Early Bird <small>£50 Regular</small></div>
               <a href="#" class="btn-outline" onclick="openTripDetails(event)">View Details</a>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- anchor to jump here from modal -->
+      <div id="book"></div>
       <div class="view-all">
         <a class="btn-primary"
            href="https://docs.google.com/forms/d/e/1FAIpQLSdVNHOLodVDJWEwMDz82zWruK9bHep6CDavWrJHCLy9hktZcw/viewform?usp=header"
@@ -267,79 +290,89 @@
   </section>
 
   <!-- Trip Details Modal -->
-  <div id="tripModal" class="modal">
+  <div id="tripModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="cotswolds-title">
     <div class="modal-content">
-      <button class="close-modal" onclick="closeTripDetails()">&times;</button>
+      <button class="close-modal" aria-label="Close" onclick="closeTripDetails()">&times;</button>
       <div class="modal-header">
         <div class="trip-location">📍 Cotswolds, England</div>
-        <h2>Cotswolds Escape</h2>
+        <h2 id="cotswolds-title">Cotswolds Escape</h2>
       </div>
       <div class="modal-body">
         <p>Spend a dreamy day among honey-stone cottages, arched bridges, gentle rivers, and classic English countryside views.</p>
 
         <h3>📍 Places to Visit</h3>
         <ul>
-          <li><strong>Bibury</strong> — <em>Arlington Row</em> (14th-century cottages; iconic photo spot), <em>Bibury Trout Farm</em> (one of the UK’s oldest, with café and outdoor activities), <em>Church of St Mary</em> (11th-century Grade I), and <em>Rack Isle Nature Reserve</em> (wildflowers, birdlife, medieval wool-drying history).</li>
-          <li><strong>Bourton-on-the-Water</strong> — <em>Birdland Park & Gardens</em> (500+ birds incl. penguins, flamingos, parrots), <em>Cotswold Motoring Museum & Toy Collection</em> (seven galleries), <em>The Model Village</em> (1/9-scale stone replica), <em>Cotswold Perfumery</em> (guided fragrance tours), plus riverside walks over 18th-century bridges along the River Windrush.</li>
+          <li><strong>Bibury</strong> — <em>Arlington Row</em> (14th-century cottages; iconic photo spot), <em>Bibury Trout Farm</em> (one of the UK’s oldest, with café and outdoor areas), <em>Church of St Mary</em> (11th-century Grade I), and <em>Rack Isle Nature Reserve</em> (wildflowers, birdlife, medieval wool-drying history).</li>
+          <li><strong>Bourton-on-the-Water</strong> — <em>Birdland Park & Gardens</em> (500+ birds incl. penguins, flamingos, parrots), <em>Cotswold Motoring Museum & Toy Collection</em>, <em>The Model Village</em> (1/9-scale stone replica), <em>Cotswold Perfumery</em>, plus riverside walks over 18th-century bridges along the River Windrush.</li>
         </ul>
 
-        <h3>🗓️ Timetable</h3>
-        <table class="simple-table">
-          <thead><tr><th>Time</th><th>Location</th><th>Main Site / Activity</th><th>Coach Stop / Postcode</th></tr></thead>
-          <tbody>
-            <tr><td>08:00</td><td>London King’s Cross</td><td>Coach departs (arrive 15 mins early)</td><td>N1 9AB</td></tr>
-            <tr><td>10:30</td><td>Bibury</td><td>Arlington Row, Trout Farm, St Mary’s, Rack Isle</td><td>GL7 5NP</td></tr>
-            <tr><td>14:00</td><td>Depart Bibury</td><td>Coach to Bourton-on-the-Water</td><td>—</td></tr>
-            <tr><td>14:45</td><td>Bourton-on-the-Water</td><td>Birdland, Motoring Museum, Model Village, Perfumery, River walks</td><td>GL54 2AS</td></tr>
-            <tr><td>17:00</td><td>Depart Bourton</td><td>Return coach to London</td><td>—</td></tr>
-            <tr><td>20:30</td><td>London King’s Cross</td><td>Arrive back at base</td><td>N1 9AB</td></tr>
-          </tbody>
-        </table>
-
-        <h3>🅿️ Coach Parking Details</h3>
-        <ul>
-          <li><strong>Bibury:</strong> Use <em>GL7 5NP</em> (village/coach areas near Arlington Row & Trout Farm).</li>
-          <li><strong>Bourton-on-the-Water:</strong> Use <em>GL54 2AS</em> for Bourton Vale Car Park, Station Road (coach bays).</li>
-        </ul>
-
-        <h3>🧭 Detailed Itinerary</h3>
+        <h3>🧭 Itinerary (typical day)</h3>
         <ul class="tight-list">
-          <li>🕗 <strong>08:00</strong> — Depart London King’s Cross (arrive 15 mins early, N1 9AB).</li>
+          <li>🕗 <strong>08:00</strong> — Depart London King’s Cross (arrive 15 mins early).</li>
           <li>🥨 Snacks provided on the coach (outbound & return).</li>
-          <li>🕙 <strong>10:30</strong> — Arrive Bibury; walk to Arlington Row for photography.</li>
-          <li>🏞️ <strong>10:45</strong> — Bibury Trout Farm (aquaculture, outdoor areas, café).</li>
+          <li>🕙 <strong>10:30</strong> — Arrive Bibury; Arlington Row photos.</li>
+          <li>🏞️ <strong>10:45</strong> — Bibury Trout Farm (outdoor areas & café).</li>
           <li>⛪ <strong>12:00</strong> — Church of St Mary & Rack Isle Nature Reserve.</li>
           <li>🥪 <strong>13:00</strong> — Lunch break in Bibury.</li>
           <li>🚌 <strong>14:00</strong> — Coach to Bourton-on-the-Water (scenic drive).</li>
-          <li>🕐 <strong>14:45</strong> — Arrive Bourton; free time & attractions.</li>
-          <li>🦚 <strong>15:00</strong> — Birdland Park & Gardens.</li>
-          <li>🚗 <strong>15:45</strong> — Cotswold Motoring Museum & Toy Collection.</li>
-          <li>🏘️ <strong>16:15</strong> — The Model Village.</li>
+          <li>🕐 <strong>14:45</strong> — Free time & attractions in Bourton.</li>
+          <li>🦚 <strong>15:00</strong> — Birdland.</li>
+          <li>🚗 <strong>15:45</strong> — Motoring Museum.</li>
+          <li>🏘️ <strong>16:15</strong> — Model Village.</li>
           <li>🌸 <strong>16:45</strong> — Cotswold Perfumery (guided tour).</li>
           <li>🛍️ <strong>17:15</strong> — Riverside walks, bridges, shops & cafés.</li>
           <li>🚌 <strong>17:45</strong> — Board coach for London.</li>
-          <li>🥨 Refreshments served on return journey.</li>
-          <li>🕘 <strong>20:30</strong> — Arrive King’s Cross (N1 9AB).</li>
-        </ul>
-
-        <h3>✅ What’s Included</h3>
-        <ul>
-          <li>Return coach travel from Central London</li>
-          <li>Friendly group lead</li>
-          <li>Snacks & water on both journeys</li>
-          <li>Plenty of free time for lunch, shopping, and photos</li>
+          <li>🕘 <strong>20:30</strong> — Arrive King’s Cross.</li>
         </ul>
 
         <p style="margin-top:8px;color:#666"><em>Order of stops may change due to traffic/seasonal events.</em></p>
       </div>
       <div class="modal-footer">
-        <div class="price-highlight">£149 <span style="font-size:16px;color:#666;font-weight:400;">per person</span></div>
-        <a class="btn-primary"
-           href="https://docs.google.com/forms/d/e/1FAIpQLSdVNHOLodVDJWEwMDz82zWruK9bHep6CDavWrJHCLy9hktZcw/viewform?usp=header"
-           target="_blank" rel="noopener">Book This Trip →</a>
+        <div class="price-highlight">£45 Early Bird <span style="font-size:16px;color:#666;font-weight:400;"> (£50 Regular)</span></div>
+        <a class="btn-primary" href="#book" onclick="closeTripDetails()">Book This Trip →</a>
       </div>
     </div>
   </div>
+
+  <!-- About -->
+  <section class="about-hero" id="about">
+    <div class="container">
+      <h1>About Manjummel Travels</h1>
+      <p>Your trusted partner for unforgettable UK day trip experiences from London</p>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="about-content">
+      <div class="about-grid">
+        <div class="about-image" style="background-image:url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80')"></div>
+        <div class="about-text">
+          <h2>About Our Company</h2>
+          <p>At <strong>Manjummel Travels</strong>, we’re more than a travel service — we’re creators of exceptional adventures for the UK Tamil community and all who seek memorable journeys.</p>
+
+          <h2>Our Philosophy</h2>
+          <p>We believe the best journeys are about connection — from exploring Durdle Door to sharing moments in scenic countryside and vibrant cities.</p>
+
+          <h2>Why Choose Manjummel Travels?</h2>
+          <p><strong>Curated Itineraries</strong> — Iconic UK landscapes with authentic Tamil community flavour.</p>
+          <p><strong>Group Travel with a Difference</strong> — Warm, welcoming adventures designed for real connection.</p>
+          <p><strong>Budget-Friendly Comfort</strong> — Great value, always high quality.</p>
+          <p><strong>Timeless Memories</strong> — We capture moments and make every experience unforgettable.</p>
+
+          <p>Join us and book your spot for authentic Tamil hospitality and lifelong memories!</p>
+        </div>
+      </div>
+
+      <div class="about-grid" style="margin-top:40px;">
+        <div class="about-text">
+          <h2>Our Commitment</h2>
+          <p>We provide exceptional service and make the beauty of the UK accessible to all. From careful planning to friendly on-trip support, our team looks after every detail.</p>
+          <div style="margin-top:20px;"><a href="#trips" class="btn-primary">Explore Our Trips</a></div>
+        </div>
+        <div class="about-image" style="background-image:url('https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=800&q=80')"></div>
+      </div>
+    </div>
+  </section>
 
   <!-- Terms & Policies -->
   <section class="terms" id="terms">
