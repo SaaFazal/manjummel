@@ -15,6 +15,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon.ico">
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
   <title>Manjummel Travels - UK Day Trips & Excursions</title>
 
   <style>
@@ -49,7 +52,7 @@
     .hero{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80');background-size:cover;background-position:center;color:#fff;text-align:center;padding:150px 20px;min-height:560px;display:flex;align-items:center;justify-content:center}
     .hero-content{max-width:900px}
     .badge{background:#16a085;color:#fff;padding:8px 20px;border-radius:20px;display:inline-block;margin-bottom:30px;font-size:14px;font-weight:600}
-    .hero h1{font-size:56px;margin-bottom:20px;font-weight:700}
+    .hero h1{font-family:'Playfair Display',serif;font-size:56px;margin-bottom:20px;font-weight:800;letter-spacing:.3px}
     .hero p{font-size:20px;margin-bottom:40px;line-height:1.6}
     .hero-buttons{display:flex;gap:20px;justify-content:center}
 
@@ -60,17 +63,20 @@
     .upcoming .title{font-size:28px;font-weight:700;text-align:center}
     .slider{position:relative;margin:20px auto 0;max-width:1100px}
     .slides{
-      display:flex;gap:20px;overflow:hidden;scroll-behavior:smooth;
-      justify-content:center;
+      display:flex;gap:20px;overflow:hidden;scroll-behavior:smooth;justify-content:center;
       padding:0 56px; /* space for arrows */
     }
     .slide{
       flex:0 0 85%; max-width:900px; border-radius:16px; position:relative;
-      box-shadow:0 10px 24px rgba(0,0,0,.12); background:#000; overflow:hidden;
+      box-shadow:0 10px 24px rgba(0,0,0,.12); background:#111; overflow:hidden;
     }
+    /* show full poster */
     .slide img{
-      width:100%; aspect-ratio:16/9; height:auto; object-fit:cover; display:block;
-      transform: translateZ(0);
+      width:100%;
+      height:clamp(220px, 28vw, 420px);
+      object-fit:contain;
+      display:block;
+      background:#111;
     }
     .slide .label{
       position:absolute; left:16px; bottom:16px;
@@ -124,7 +130,7 @@
     .faq details p{margin-top:10px;color:#444}
     .faq .cta{text-align:center;margin-top:18px}
 
-    /* About + terms + footer */
+    /* About + footer */
     .about-hero{background:linear-gradient(135deg,#16a085 0%,#138f75 100%);color:#fff;padding:100px 20px;text-align:center}
     .about-hero h1{font-size:48px;margin-bottom:20px}
     .about-hero p{font-size:20px;max-width:700px;margin:0 auto;opacity:.95}
@@ -134,14 +140,6 @@
     .about-image{width:100%;height:400px;border-radius:10px;background-size:cover;background-position:center}
     .about-text h2{font-size:32px;margin-bottom:15px;color:#333}
     .about-text p{color:#444;line-height:1.8;margin-bottom:14px;font-size:16px}
-
-    .terms{padding:80px 20px;background:#fff}
-    .terms .wrap{max-width:1000px;margin:0 auto}
-    .terms h2{font-size:42px;margin-bottom:20px;text-align:center}
-    .terms h3{font-size:20px;margin-top:24px;margin-bottom:8px}
-    .terms p, .terms li{color:#555;line-height:1.8;font-size:15px}
-    .terms ul{padding-left:18px;margin:10px 0}
-    .terms .meta{color:#777;margin-bottom:14px;text-align:center}
 
     footer{background:#1a2332;color:#fff;padding:60px 20px 20px}
     .footer-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-bottom:40px}
@@ -156,52 +154,43 @@
     .social-icons a:hover{background:#16a085}
     .footer-bottom{max-width:1200px;margin:0 auto;padding-top:30px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;font-size:14px;color:#adb5bd}
 
-    /* Floating buttons (IG + WhatsApp) — always on top */
-    .instagram-float,
-    .whatsapp-float{
-      position:fixed; width:60px; height:60px; right:30px;
-      border-radius:50%; display:flex; align-items:center; justify-content:center;
-      box-shadow:2px 2px 15px rgba(0,0,0,.3); cursor:pointer; text-decoration:none;
-      z-index:5000;
+    /* Floating buttons (IG + WhatsApp) */
+    .instagram-float,.whatsapp-float{
+      position:fixed;width:60px;height:60px;right:30px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;box-shadow:2px 2px 15px rgba(0,0,0,.3);
+      cursor:pointer;text-decoration:none;z-index:5000
     }
-    .instagram-float{
-      bottom:110px;
-      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-      color:#fff; transition:transform .2s ease;
-    }
-    .instagram-float:hover{ transform:scale(1.08) }
-    .instagram-float svg{ width:28px; height:28px; fill:#fff; display:block }
-    .whatsapp-float{
-      bottom:30px;
-      background:#25d366; color:#fff; font-size:30px;
-    }
+    .instagram-float{bottom:110px;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);color:#fff;transition:transform .2s}
+    .instagram-float:hover{transform:scale(1.08)}
+    .instagram-float svg{width:28px;height:28px;fill:#fff;display:block}
+    .whatsapp-float{bottom:30px;background:#25d366;color:#fff;font-size:30px}
     @media (max-width:480px){
-      .instagram-float{ bottom:100px; right:24px; width:56px; height:56px }
-      .instagram-float svg{ width:26px; height:26px }
-      .whatsapp-float{ right:24px; width:56px; height:56px; font-size:28px }
+      .instagram-float{bottom:100px;right:24px;width:56px;height:56px}
+      .instagram-float svg{width:26px;height:26px}
+      .whatsapp-float{right:24px;width:56px;height:56px;font-size:28px}
     }
 
-    /* Modal (smaller + scrollable) */
+    /* Modal (cleaner typography) */
     .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:4000;padding:20px}
     .modal.active{display:flex}
-    .modal-content{
-      background:#fff; width:100%; max-width:680px; max-height:85vh;
-      border-radius:10px; box-shadow:0 10px 40px rgba(0,0,0,.25); overflow:hidden; position:relative;
-      display:flex; flex-direction:column;
-    }
-    .modal-header{padding:20px 24px;border-bottom:1px solid #eee;flex:0 0 auto}
-    .modal-body{padding:20px 24px;flex:1 1 auto;overflow:auto}
-    .modal-footer{padding:16px 24px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between;flex:0 0 auto}
+    .modal-content{background:#fff;width:100%;max-width:680px;max-height:85vh;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.25);overflow:hidden;position:relative;display:flex;flex-direction:column}
+    .modal-header{padding:20px 24px;border-bottom:1px solid #eee}
+    .modal-header h2{font-size:26px;margin-top:6px}
+    .modal-body{padding:18px 24px;flex:1 1 auto;overflow:auto}
+    .modal-body p{margin:0 0 14px 0}
+    .modal-body h3{font-size:18px;margin:18px 0 10px 0}
+    .modal-body ul{padding-left:20px}
+    .modal-body li{margin:8px 0}
+    .modal-footer{padding:14px 24px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between}
     .close-modal{position:absolute;border:none;background:transparent;font-size:28px;line-height:1;cursor:pointer;right:16px;top:10px}
     .tight-list li{margin:6px 0}
-
-    /* Instagram glyph reuse */
+    .muted{color:#666}
     .ig svg{width:20px;height:20px;display:block}
     .ig{display:inline-flex;align-items:center;justify-content:center}
     .ig span{font-weight:600}
 
     @media (max-width:768px){
-      .hero h1{font-size:36px}
+      .hero h1{font-size:38px}
       .hero p{font-size:16px}
       .hero-buttons{flex-direction:column}
       nav ul{display:none}
@@ -249,7 +238,7 @@
         <a href="mailto:manjummeltravels@gmail.com">✉️ manjummeltravels@gmail.com</a>
       </div>
       <div>
-        <a class="ig" href="https://instagram.com/manjummeltravels" target="_blank" rel="noopener" aria-label="Instagram">
+        <a class="ig" href="https://www.instagram.com/manjummel_travels/" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 2.2A3.8 3.8 0 1 0 15.8 13 3.8 3.8 0 0 0 12 9.2zM18.5 6a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 18.5 6z"/></svg>
           <span>Instagram</span>
         </a>
@@ -272,7 +261,8 @@
         <li><a href="#trips">Our Trips</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#about">About Us</a></li>
-        <li><a href="#terms">Terms</a></li>
+        <!-- Terms goes to standalone page -->
+        <li><a href="terms.html">Terms</a></li>
         <li><a href="#trips" class="btn-primary">Book a Trip</a></li>
       </ul>
     </div>
@@ -298,7 +288,7 @@
       <button class="nav prev" aria-label="Previous">‹</button>
       <div class="slides">
         <a href="#trips" class="slide" onclick="openPosterToDetails(event)" title="Cotswolds — view details">
-          <img src="assets/cotswold-cover.jpg" alt="Cotswolds poster">
+          <img src="assets/cotswold-cover.jpg" alt="Cotswolds poster showing Early Bird price">
           <div class="label">Cotswolds — Tap for Details</div>
         </a>
       </div>
@@ -344,7 +334,6 @@
         </div>
       </div>
 
-      <!-- anchor to jump here from modal -->
       <div id="book"></div>
       <div class="view-all">
         <a class="btn-primary"
@@ -359,7 +348,7 @@
     <div class="modal-content">
       <button class="close-modal" aria-label="Close" onclick="closeTripDetails()">&times;</button>
       <div class="modal-header">
-        <div class="trip-location">📍 Cotswolds, England</div>
+        <div class="trip-location muted">📍 Cotswolds, England</div>
         <h2 id="cotswolds-title">Cotswolds Escape</h2>
       </div>
       <div class="modal-body">
@@ -389,11 +378,10 @@
           <li>🚌 <strong>17:45</strong> — Board coach for London.</li>
           <li>🕘 <strong>20:30</strong> — Arrive King’s Cross.</li>
         </ul>
-
-        <p style="margin-top:8px;color:#666"><em>Order of stops may change due to traffic/seasonal events.</em></p>
+        <p class="muted"><em>Order of stops may change due to traffic/seasonal events.</em></p>
       </div>
       <div class="modal-footer">
-        <div class="price-highlight">£45 Early Bird <span style="font-size:16px;color:#666;font-weight:400;"> (£50 Regular)</span></div>
+        <div class="price-highlight">£45 Early Bird <span class="muted" style="font-weight:400;"> (£50 Regular)</span></div>
         <a class="btn-primary" href="#book" onclick="closeTripDetails()">Book This Trip →</a>
       </div>
     </div>
@@ -407,7 +395,11 @@
 
       <details>
         <summary>Where do we depart from and what time?</summary>
-        <p>We depart from London King’s Cross (N1 9AB) at <strong>08:00</strong>. Please arrive at least 15 minutes early for check-in.</p>
+        <p>
+          Most trips depart from Central London (often near King’s Cross) in the early morning, but the
+          <strong>exact meeting point and time can vary by trip/date</strong>. Please check your booking
+          confirmation email/WhatsApp message for the specific departure details for your chosen date.
+        </p>
       </details>
 
       <details>
@@ -486,83 +478,6 @@
     </div>
   </section>
 
-  <!-- Terms & Policies -->
-  <section class="terms" id="terms">
-    <div class="wrap">
-      <h2>Terms & Policies</h2>
-      <div class="meta">Last updated: 01-11-2025</div>
-
-      <h3>Who We Are</h3>
-      <p><strong>Manjummel Travels</strong> — your trusted provider of authentic UK Tamil travel experiences.<br>
-      Email: <a href="mailto:manjummeltravels@gmail.com">manjummeltravels@gmail.com</a> ·
-      Phone/WhatsApp: <a href="tel:+447823725401">+44 7823 725401</a></p>
-
-      <h3>Scope of Terms</h3>
-      <p>These terms apply to all trips, tours, and travel packages booked via our website, email, phone, or WhatsApp.</p>
-
-      <h3>Booking & Confirmation</h3>
-      <ul>
-        <li>Your booking is confirmed only after payment (or stated deposit) and our confirmation email.</li>
-        <li>Provide accurate personal details and any dietary/special needs when booking.</li>
-      </ul>
-
-      <h3>Pricing & Payments</h3>
-      <ul>
-        <li>All prices are in GBP (£), inclusive of applicable taxes unless noted.</li>
-        <li>Secure online payments via Stripe or PayPal are accepted.</li>
-        <li>Obvious pricing errors may be cancelled with a full refund.</li>
-      </ul>
-
-      <h3>What’s Included / Not Included</h3>
-      <p>Please see each trip page for inclusions (e.g., transport) and exclusions (e.g., optional entrance fees).</p>
-
-      <h3>Cancellations & Date Changes</h3>
-      <ul>
-        <li>Free cancellation up to 48 hours before departure.</li>
-        <li>Within 48 hours or no-show: non-refundable.</li>
-        <li>One free date change up to 48 hours pre-departure (subject to availability).</li>
-      </ul>
-
-      <h3>Operator Changes & Cancellations</h3>
-      <ul>
-        <li>We may adjust timings/routes for safety, traffic, or weather.</li>
-        <li>If we cancel, choose a full refund or a free reschedule.</li>
-        <li>We are not responsible for extra costs beyond the trip fee.</li>
-      </ul>
-
-      <h3>Minimum Numbers & Punctuality</h3>
-      <ul>
-        <li>Some trips require a minimum number of guests; if not met, we’ll refund or offer another date.</li>
-        <li>Departures leave promptly; late arrivals may forfeit their place without refund.</li>
-      </ul>
-
-      <h3>Health, Safety, & Accessibility</h3>
-      <ul>
-        <li>Travellers should be fit for the trip; share medical/mobility needs in advance.</li>
-        <li>Wear suitable footwear and weather-appropriate clothing.</li>
-        <li>Some destinations have limited accessibility; see trip details.</li>
-      </ul>
-
-      <h3>Dietary Needs</h3>
-      <p>State Veg/Non-Veg and any special requests when booking; third-party venues may have limits.</p>
-
-      <h3>Behaviour & Property</h3>
-      <p>Disruptive/unsafe/illegal behaviour may result in removal without refund. Guests are liable for damage to property/vehicles.</p>
-
-      <h3>Personal Belongings</h3>
-      <p>Guests are responsible for their belongings; we’re not liable for loss/theft/damage unless due to our negligence.</p>
-
-      <h3>Weather & Force Majeure</h3>
-      <p>We’re not liable for changes or delays due to severe weather, strikes, or events beyond our control; we’ll reschedule or refund where appropriate.</p>
-
-      <h3>Children & Age Policy</h3>
-      <p>Under-16s must be with a responsible adult. Child seats must be requested and confirmed if required by UK law.</p>
-
-      <h3>Insurance</h3>
-      <p>We recommend personal travel insurance covering cancellations, health, and valuables.</p>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer id="contact">
     <div class="footer-content">
@@ -573,7 +488,7 @@
         </div>
         <p style="margin-top:20px;">Discover the beauty of Britain with our friendly, community-style day trips from London.</p>
         <div class="social-icons">
-          <a class="ig" href="https://instagram.com/manjummeltravels" target="_blank" rel="noopener" aria-label="Instagram">
+          <a class="ig" href="https://www.instagram.com/manjummel_travels/" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 2.2A3.8 3.8 0 1 0 15.8 13 3.8 3.8 0 0 0 12 9.2zM18.5 6a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 18.5 6z"/></svg>
           </a>
         </div>
@@ -586,7 +501,7 @@
           <li><a href="#trips">Our Trips</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#terms">Terms & Policies</a></li>
+          <li><a href="terms.html">Terms & Policies</a></li>
         </ul>
       </div>
 
@@ -614,15 +529,15 @@
     <div class="footer-bottom">
       <div>© 2025 Manjummel Travels. All rights reserved.</div>
       <div class="footer-links">
-        <a href="#terms">Privacy</a>
-        <a href="#terms">Terms</a>
-        <a href="#terms">Cookies</a>
+        <a href="terms.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="terms.html">Cookies</a>
       </div>
     </div>
   </footer>
 
   <!-- Floating Instagram -->
-  <a href="https://instagram.com/manjummeltravels"
+  <a href="https://www.instagram.com/manjummel_travels/"
      class="instagram-float" target="_blank" rel="noopener"
      aria-label="Open Instagram profile">
     <svg viewBox="0 0 24 24" aria-hidden="true">
