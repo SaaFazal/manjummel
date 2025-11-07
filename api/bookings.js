@@ -1,4 +1,4 @@
-// api/bookings.js
+﻿// api/bookings.js
 import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
 
@@ -39,7 +39,7 @@ export default async function handler(req, res) {
 
     if (error) throw error;
 
-    // 2) Send emails (use Resend’s neutral sender until your domain is verified)
+    // 2) Send emails (use Resendâ€™s neutral sender until your domain is verified)
     const sender =
       process.env.MAIL_FROM ||
       'Manjummel Travels <notifications@resend.dev>'; // swap to manjummeltravels@gmail.com after DNS verified in Resend
@@ -48,11 +48,11 @@ export default async function handler(req, res) {
     await resend.emails.send({
       from: sender,
       to: email,
-      subject: `We received your enquiry – ${trip}`,
+      subject: `We received your enquiry â€“ ${trip}`,
       html: `<p>Hi ${escapeHtml(name)},</p>
              <p>Thanks for your enquiry for <strong>${escapeHtml(trip)}</strong>.</p>
-             <p>We’ll get back to you shortly with details.</p>
-             <p>— Manjummel Travels</p>`
+             <p>Weâ€™ll get back to you shortly with details.</p>
+             <p>â€” Manjummel Travels</p>`
     });
 
     // to admin (optional)
@@ -80,3 +80,4 @@ function escapeHtml(s = '') {
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
 }
+
