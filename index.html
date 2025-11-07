@@ -117,6 +117,18 @@
     .trip-price{color:#16a085;font-size:22px;font-weight:800}
     .trip-price small{display:block;color:#888;font-weight:500;margin-top:2px}
     .view-all{text-align:center;margin-top:50px}
+    /* Trip date pill */
+    .trip-date{
+      display:inline-block;
+      background:#e8f6f2;
+      color:#0e7e68;
+      border:1px solid #cbece4;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+      margin:0 0 10px 0;
+    }
 
     /* FAQ */
     .faq{padding:70px 20px;background:#fff}
@@ -170,7 +182,7 @@
       .whatsapp-float{right:24px;width:56px;height:56px;font-size:28px}
     }
 
-    /* Modal (cleaner typography) */
+    /* Modal (clean typography) */
     .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:4000;padding:20px}
     .modal.active{display:flex}
     .modal-content{background:#fff;width:100%;max-width:680px;max-height:85vh;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.25);overflow:hidden;position:relative;display:flex;flex-direction:column}
@@ -323,11 +335,15 @@
           </div>
           <div class="trip-content">
             <div class="trip-location">📍 Cotswolds, England</div>
+            <div class="trip-date">📅 Saturday 22nd November</div>
             <h3>Cotswolds Escape</h3>
             <p>Visit Bibury’s Arlington Row, riverside Bourton-on-the-Water, and more picture-perfect villages in one relaxed day.</p>
             <div class="trip-duration">🕐 1 Day</div>
             <div class="trip-footer">
-              <div class="trip-price">£45 Early Bird <small>£50 Regular</small></div>
+              <div class="trip-price">
+                £45 Early Bird <small>+ booking charge</small>
+                <small>£49 Standard + booking charge</small>
+              </div>
               <a href="#" class="btn-outline" onclick="openTripDetails(event)">View Details</a>
             </div>
           </div>
@@ -353,6 +369,7 @@
       </div>
       <div class="modal-body">
         <p>Spend a dreamy day among honey-stone cottages, arched bridges, gentle rivers, and classic English countryside views.</p>
+        <p class="muted" style="margin-top:-2px">📅 <strong>Saturday 22nd November</strong></p>
 
         <h3>📍 Places to Visit</h3>
         <ul>
@@ -381,7 +398,10 @@
         <p class="muted"><em>Order of stops may change due to traffic/seasonal events.</em></p>
       </div>
       <div class="modal-footer">
-        <div class="price-highlight">£45 Early Bird <span class="muted" style="font-weight:400;"> (£50 Regular)</span></div>
+        <div class="price-highlight">
+          £45 Early Bird + booking charge
+          <span class="muted" style="font-weight:400;">(£49 Standard + booking charge)</span>
+        </div>
         <a class="btn-primary" href="#book" onclick="closeTripDetails()">Book This Trip →</a>
       </div>
     </div>
